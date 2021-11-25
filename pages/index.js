@@ -15,6 +15,14 @@ export default function Home() {
     "Material UI",
     "NextJS",
     "NuxtJS",
+    "TypeScript",
+    "HTML",
+    "CSS3",
+    "Entity Framework",
+    "SocketIO",
+    "Vuetify",
+    "Express",
+    "Bootstrap"
   ];
 
   return (
@@ -61,25 +69,34 @@ export default function Home() {
           content="https://adegoke.dev/images/adegoke.jpg"
         />
       </Head>
-      <div className="h-screen w-screen flex items-center justify-center">
+      <div className="h-screen w-screen flex items-center justify-center bg-gray-700 text-white">
         <div>
-          <h1 className="text-5xl font-bold container text-center">
+          <h1 className="text-5xl font-bold container text-center mb-2">
             Adegoke Temitope
           </h1>
-          <h4 className="text-2xl font-medium container text-center">
+          <h4 className="text-3xl font-medium container text-center">
             Software Engineer
           </h4>
-          <div className="mt-5 flex flex-wrap items-center justify-center container">
+          <div className="mt-5 flex flex-wrap items-center justify-center container w-9/12 mx-auto">
             {languages.map((language, index) => {
               return (
                 <div
                   key={index}
-                  className="inline-block text-base mx-4 text-gray-500"
+                  className="inline-block text-base mx-2 text-gray-500"
                 >
-                  <span>#{language}</span>
+                  <span className="cursor-pointer">{language}</span>
                 </div>
               );
             })}
+          </div>
+          <div className="flex items-start justify-center mt-5">
+            <a
+              download
+              href="/adegoke_temitope_cv.pdf"
+              className="text-black font-medium text-base bg-gray-200 uppercase px-4 py-2 rounded-md"
+            >
+              Download Resume{" "}
+            </a>
           </div>
         </div>
       </div>
