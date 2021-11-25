@@ -30,10 +30,10 @@ export default function Home() {
         <h4 className="text-2xl font-medium container text-center">
           Software Engineer
         </h4>
-        <div className="mt-5 flex items-center justify-center container">
+        <div className="mt-5 flex flex-wrap items-center justify-center container">
           {languages.map((language, index) => {
             return (
-              <div key={index} className="inline-block text-2xl mx-4 text-blue-500">
+              <div key={index} className="inline-block text-base mx-4 text-gray-500">
                 <span>#{language}</span>
               </div>
             );
