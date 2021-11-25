@@ -22,8 +22,9 @@ export default function Home() {
       <Head>
         <title>AdegokemTemitope</title>
       </Head>
-      <div>
-        <h1 className="text-5xl font-bold container text-center">
+      <div className="h-screen w-screen flex items-center justify-center">
+       <div>
+          <h1 className="text-5xl font-bold container text-center">
           Adegoke Temitope
         </h1>
         <h4 className="text-2xl font-medium container text-center">
@@ -32,12 +33,13 @@ export default function Home() {
         <div className="mt-5 flex items-center justify-center container">
           {languages.map((language, index) => {
             return (
-              <div key={index} className="inline-block text-2xl">
+              <div key={index} className="inline-block text-2xl mx-4 text-blue-500">
                 <span>#{language}</span>
               </div>
             );
           })}
         </div>
+       </div>
       </div>
     </>
   );
