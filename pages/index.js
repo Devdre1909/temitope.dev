@@ -3,30 +3,6 @@ import { Navbar } from "../components/Navbar";
 import OverviewScreen from "../components/OverviewScreen/OverviewScreen";
 
 export default function Home() {
-  const languages = [
-    "JavaScript",
-    "NodeJs",
-    "C#",
-    ".NET",
-    ".NET Core",
-    "ReactJS",
-    "Redux",
-    "VueJS",
-    "Vuex",
-    "TailwindCSS",
-    "Material UI",
-    "NextJS",
-    "NuxtJS",
-    "TypeScript",
-    "HTML",
-    "CSS3",
-    "Entity Framework",
-    "SocketIO",
-    "Vuetify",
-    "Express",
-    "Bootstrap",
-  ];
-
   return (
     <>
       <Head>
@@ -41,7 +17,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="Adegoke Temitope, Adegoke, Temitope, Temitope Adegoke, Temitope Adegoke Portfolio, Temitope Adegoke Portfolio, Software, Developer, Frontend, Engineer, Designer, UX, Temmy, React"
+          content="Adegoke Temitope, Adegoke, Temitope, Temitope Adegoke, Temitope Adegoke Portfolio, Temitope Adegoke Portfolio, Software, Developer, Frontend, Engineer, Designer, UX, Temmy, React, self-taught Front-end developer"
         />
         <meta name="author" content="Adegoke Temitope" />
         <meta name="robots" content="index, follow" />
