@@ -75,15 +75,16 @@ const OverviewScreen = () => {
             ref={subtitleRef}
             className="text-white mt-8 leading-[23px] md:text-lg text-sm md:w-8/12"
           >
-            I’m a Self-taught full stack software developer who prides in
+            I’m a self-taught full stack software developer who prides in
             building user-centered, scalable and accessible quality products,
-            with demonstrated history of working with programming languages and
-            frameworks, frameworks and libraries including React, Vue, Next,
-            Node, Express, MongoDB, PostgreSQL, MySQL, and more. Presently,
+            with demonstrated history of working with programming languages,
+            frameworks and libraries including React, Vue, Next,
+            Node, Express, MongoDB, MySQL, and more. 
+            {/* Presently,
             Leading Frontend at{" "}
             <a href="https://www.mymatacare.com/" target="_blank" className="hover:underline text-brand-orange cursor-pointer">
               MataCare
-            </a>
+            </a> */}
           </p>
           <div
             ref={actionRef}
