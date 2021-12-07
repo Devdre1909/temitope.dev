@@ -90,7 +90,7 @@ const OverviewScreen = () => {
             ref={actionRef}
             className="flex mt-10 justify-center md:justify-start"
           >
-            <ButtonStyled>Hire Me</ButtonStyled>
+            <ButtonStyled>Contact Me</ButtonStyled>
           </div>
         </div>
       </div>
