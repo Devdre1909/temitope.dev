@@ -60,7 +60,9 @@ const Me = () => {
               </div>
             </div>
           </div>
-          <div className="md:w-4/12 hidden md:block"></div>
+          <div className="md:w-4/12 hidden md:block">
+            <img className="filter grayscale object-fill hover:blur-0 transition-all duration-150" src="/images/me.jpeg" />
+          </div>
         </div>
       </div>
     </>

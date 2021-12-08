@@ -5,19 +5,40 @@
   align-items: flex-start;
   position: fixed;
   height: 100vh;
-  width: 35vw;
-  /* transform: translateX(1000px); */
+  width: 80vw;
+  transform: translateX(1000px);
+  transition: transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   z-index: 100;
   right: 0px;
   top: 0px;
   padding: 20px;
   overflow-y: scroll;
-  @apply bg-brand-blue-darker shadow-lg border-l-2 border-brand-orange;
+  @apply bg-brand-blue-darker backdrop-blur-xl bg-opacity-75 shadow-lg border-l-2 border-brand-orange;
+}
+
+@screen md {
+  .wrapper {
+    width: 32vw;
+  }
 }
 
 
+.wrapper::-webkit-scrollbar{
+  width: 8px;
+  @apply bg-brand-blue-dark;
+}
+
+.wrapper::-webkit-scrollbar-thumb{
+  @apply bg-brand-orange rounded-md;
+ 
+}
+
+.wrapper.open {
+  transform: translateX(0px);
+}
+
 .links {
-  @apply text-brand-light font-light text-7xl cursor-pointer relative mb-5 block;
+  @apply text-brand-light font-light md:text-7xl text-6xl cursor-pointer relative mb-5 block;
 }
 
 .links:hover {

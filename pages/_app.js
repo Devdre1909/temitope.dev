@@ -1,7 +1,10 @@
 import Head from "next/head";
+import { Provider } from "react-redux";
 
+import { store } from "../app/store";
 import "tailwindcss/tailwind.css";
 import "../assets/styles/global.css";
+import { Navbar } from "../components/Navbar";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -53,7 +56,10 @@ function MyApp({ Component, pageProps }) {
           content="https://adegoke.dev/images/adegoke.jpg"
         />
       </Head>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Navbar />
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 }

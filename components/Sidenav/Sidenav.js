@@ -1,13 +1,20 @@
 import React from "react";
 import Link from "next/link";
 import { AiOutlineClose } from "react-icons/ai";
+import { useSelector, useDispatch } from "react-redux";
+
 import s from "./sidenav.module.css";
+import { closeSidebar } from "../../features/sidebar/sidebarSlice";
 
 const Sidenav = () => {
+
+  const sideBarOpen = useSelector((state) => state.sidebar.isOpen);
+  const dispatch = useDispatch();
+
   return (
-    <div className={s.wrapper}>
+    <div className={`${s.wrapper} ${sideBarOpen ? s["open"] : ""}`}>
       <div className="w-full flex items-center justify-end mb-4">
-        <AiOutlineClose className="text-white text-5xl" />
+        <AiOutlineClose onClick={()=>dispatch(closeSidebar())} className="text-white text-5xl cursor-pointer" />
       </div>
       <div>
         <Link href="/">
@@ -20,7 +27,7 @@ const Sidenav = () => {
         <p className={s.links}>Projects</p>
         <p className={s.links}>Contact</p>
       </div>
-      <div className="">
+      <div className="hidden md:block">
         <p className="text-brand-light font-light text-2xl text-center">
           adegoketemitope1909@gmail.com
         </p>

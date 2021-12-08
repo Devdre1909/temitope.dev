@@ -56,7 +56,7 @@ export default function Home() {
 
       <div>
         <Sidenav />
-        <Navbar />
+        {/* <Navbar /> */}
         <OverviewScreen />
       </div>
     </>
