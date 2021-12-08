@@ -4,7 +4,6 @@ import { Sidenav } from "../components/Sidenav";
 const Me = () => {
   return (
     <>
-      <Sidenav />
       <div className="h-screen md:w-screen overflow-hidden">
         <div className="flex items-start justify-start h-full w-full relative">
           <div className="md:w-8/12 bg-brand-blue-darker h-full relative">
@@ -23,16 +22,30 @@ const Me = () => {
                 <p>
                   Moving on to the present day, I have been privileged to work
                   with a an{" "}
-                  <a className="text-brand-orange hover:underline cursor-pointer">
+                  <a
+                    href="https://www.edulightconsulting.com.ng/"
+                    className="text-brand-orange hover:underline cursor-pointer"
+                  >
                     IT consultancy agency
-                  </a>{" "}
+                  </a>
                   , where I gained most of my experience in teaching,
-                  leadership, communication, management and engineering, some
-                  startups like MyExtraSheet,{" "}
-                  <a className="text-brand-orange hover:underline cursor-pointer">
+                  leadership, communication, management and engineering, also
+                  had my input, ideas in startups like MyExtraSheet, {""}
+                  <a
+                    href="https://campusdash.com.ng/"
+                    className="text-brand-orange hover:underline cursor-pointer"
+                  >
+                    CampusDash
+                  </a>
+                  ,  {" "}
+                  <a
+                    href="https://www.mymatacare.com/"
+                    target="_black"
+                    className="text-brand-orange hover:underline cursor-pointer"
+                  >
                     MataCare
                   </a>{" "}
-                  as Frontend Lead.
+                  as a Frontend Lead/Developer.
                 </p>
                 <p>
                   I've built product that solve real-life problems and help
@@ -61,7 +74,10 @@ const Me = () => {
             </div>
           </div>
           <div className="md:w-4/12 hidden md:block">
-            <img className="filter grayscale object-fill hover:blur-0 transition-all duration-150" src="/images/me.jpeg" />
+            <img
+              className="filter grayscale object-fill hover:blur-0 transition-all duration-150"
+              src="/images/me.jpeg"
+            />
           </div>
         </div>
       </div>

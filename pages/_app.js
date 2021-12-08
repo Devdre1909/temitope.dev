@@ -5,6 +5,7 @@ import { store } from "../app/store";
 import "tailwindcss/tailwind.css";
 import "../assets/styles/global.css";
 import { Navbar } from "../components/Navbar";
+import { Sidenav } from "../components/Sidenav";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -58,6 +59,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Provider store={store}>
         <Navbar />
+        <Sidenav />
         <Component {...pageProps} />
       </Provider>
     </>

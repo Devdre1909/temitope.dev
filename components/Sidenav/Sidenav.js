@@ -24,7 +24,9 @@ const Sidenav = () => {
           <p className={s.links}>About</p>
         </Link>
         <p className={s.links}>Articles</p>
-        <p className={s.links}>Projects</p>
+        <Link href="/projects">
+          <p className={s.links}>Project</p>
+        </Link>
         <p className={s.links}>Contact</p>
       </div>
       <div className="hidden md:block">
