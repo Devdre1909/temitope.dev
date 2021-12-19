@@ -32,36 +32,36 @@ export default function Home() {
         <div className="md:h-screen w-full py-16">
           <div className="spacing h-full md:flex">
             <nav className="h-full md:flex hidden justify-center items-center fixed left-10">
-              <div class="space-y-8">
+              <div className="space-y-8">
                 <a
                   href="#base"
                   data-title="Base"
-                  class="nav-dot selected-circle"
+                  className="nav-dot selected-circle"
                 ></a>
-                <a href="#about" data-title="About" class="nav-dot"></a>
-                <a href="#projects" data-title="projects" class="nav-dot"></a>
+                <a href="#about" data-title="About" className="nav-dot"></a>
+                <a href="#projects" data-title="projects" className="nav-dot"></a>
                 <a
                   href="#work-history"
                   data-title="Work History"
                   class="nav-dot"
                 ></a>
-                <a href="#contact" data-title="Contact" class="nav-dot"></a>
+                <a href="#contact" data-title="Contact" className="nav-dot"></a>
               </div>
             </nav>
-            <div class="flex h-full center w-8/12">
+            <div class="flex h-full center md:w-8/12">
               <div>
-                <h1 class="text-white font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left mt-5">
+                <h1 className="text-white font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left mt-5">
                   Building user centered, scalable, and accessible web apps
                 </h1>
-                <div class="w-full flex justify-center md:justify-start mt-12">
-                  <button class="rounded px-8 py-4 hover:bg-brand-primary hover:text-brand-dark-body transition-colors saturate-200 border-2 border-brand-primary text-brand-primary font-bold flex items-center space-x-3">
+                <div className="w-full flex justify-center md:justify-start mt-12">
+                  <button className="rounded px-8 py-4 hover:bg-brand-primary hover:text-brand-dark-body transition-colors saturate-200 border-2 border-brand-primary text-brand-primary font-bold flex items-center space-x-3">
                     <BsEmojiHeartEyes className="w-5 h-5" />
                     <span>View my works.</span>
                   </button>
                 </div>
               </div>
             </div>
-            <div className="w-4/12 flex h-full center transition duration-200 fadeIn">
+            <div className="mt-10 md:mt-0 md:w-4/12 flex h-full center transition duration-200 fadeIn">
               <Image width="" src={imageList[imageIndex]} className="" />
             </div>
           </div>
@@ -69,12 +69,12 @@ export default function Home() {
 
         <div className="py-16">
           <div className="spacing relative">
-            <div className="relative">
+            <div className="relative overflow-x-hidden">
               <p className="section-big-title">About</p>
               <h2 id="work" class="secondary-title">
                 In the past years ...
               </h2>
-              <p class="section-paragraph">A few things about me</p>
+              <p className="section-paragraph">A few things about me</p>
             </div>
             <div className="text-[#EFEFEF] md:mt-10 mt-7 font-medium text-lg space-y-6">
               <p className="font-medium md:text-lg text-base">
@@ -138,7 +138,7 @@ export default function Home() {
 
         <div className="py-16">
           <div className="spacing relative">
-            <div className="relative">
+            <div className="relative overflow-x-hidden">
               <p className="section-big-title">Projects</p>
               <h2 id="work" class="secondary-title">
                 Some things I have Built
@@ -150,7 +150,7 @@ export default function Home() {
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {projects.map((project, i) => (
                 <>
-                  <a
+                  <div
                     key={i}
                     href={project.link}
                     target="_blank"
@@ -181,7 +181,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </div>
                 </>
               ))}
 
