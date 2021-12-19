@@ -8,7 +8,7 @@ const Me = () => {
         <div className="flex items-start justify-start h-full w-full relative">
           <div className="md:w-8/12 bg-brand-blue-darker h-full relative">
             <div className="h-[90%] container w-10/12 md:w-9/12 mx-auto py-10 overflow-y-scroll no-scrollbar">
-              <h2 className="text-brand-orange text-2xl md:text-3xl font-medium">
+              <h2 className="text-brand-primary text-2xl md:text-3xl font-medium">
                 In the Last few years ...
               </h2>
               <div className="text-[#EFEFEF] md:mt-10 mt-7 font-medium text-lg space-y-6">
@@ -24,7 +24,7 @@ const Me = () => {
                   with a an{" "}
                   <a
                     href="https://www.edulightconsulting.com.ng/"
-                    className="text-brand-orange hover:underline cursor-pointer"
+                    className="text-brand-primary hover:underline cursor-pointer"
                   >
                     IT consultancy agency
                   </a>
@@ -33,7 +33,7 @@ const Me = () => {
                   had my input, ideas in startups like MyExtraSheet, {""}
                   <a
                     href="https://campusdash.com.ng/"
-                    className="text-brand-orange hover:underline cursor-pointer"
+                    className="text-brand-primary hover:underline cursor-pointer"
                   >
                     CampusDash
                   </a>
@@ -41,7 +41,7 @@ const Me = () => {
                   <a
                     href="https://www.mymatacare.com/"
                     target="_black"
-                    className="text-brand-orange hover:underline cursor-pointer"
+                    className="text-brand-primary hover:underline cursor-pointer"
                   >
                     MataCare
                   </a>{" "}
@@ -60,7 +60,7 @@ const Me = () => {
                   on Front End Engineering and working better with both the
                   UI/UX Designer and the Backend Engineers.
                 </p>
-                <p className="italic text-brand-orange">
+                <p className="italic text-brand-primary">
                   I am also open for remote or contract work.
                 </p>
               </div>

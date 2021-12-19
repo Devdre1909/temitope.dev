@@ -1,0 +1,28 @@
+.brand {
+  @apply text-brand-primary font-poppins font-semibold;
+}
+
+.link {
+  z-index: 1;
+  @apply h-full flex justify-center items-center text-white px-4 cursor-pointer relative;
+}
+
+.link::after{
+  @apply bg-brand-primary;
+  content: '';
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 200ms ease-in-out;
+  z-index: -1;
+}
+
+.link:hover {
+  @apply text-brand-dark-body;
+}
+
+.link:hover::after{
+  height: 100%;
+}

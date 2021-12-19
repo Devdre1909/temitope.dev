@@ -1,29 +1,44 @@
 import React from "react";
-import Image from "next/image";
-import { useSelector, useDispatch } from "react-redux";
-import { openSidebar } from "../../features/sidebar/sidebarSlice";
+import { CgMenuRightAlt } from "react-icons/cg";
 
-import { Button } from "../Button";
+import S from "./Navbar.module.css";
 
 const Navbar = () => {
-  const dispatch = useDispatch();
-
   return (
-    <>
-      <div className="z-10 flex items-center justify-end fixed w-full h-16">
-        <div className="container w-10/12 mx-auto flex items-center justify-end space-x-5">
-          <Button download href="/docs/adegoke_temitope_cv.pdf">
-            Résumé
-          </Button>
-          <img
-            onClick={() => dispatch(openSidebar())}
-            alt="menu"
-            className="w-10 h-10 cursor-pointer"
-            src="/images/ri_menu-4-fill.svg"
-          />
+    <div className="h-16 fixed w-full shadow-md bg-brand-dark-body z-10">
+      <div className="spacing h-full">
+        <div className="flex w-full h-full items-center justify-between">
+          <div>
+            <a className={S.brand}>DEVTEMITOPE</a>
+          </div>
+          <ul className="hidden md:flex center h-full">
+            <li className="h-full">
+              <a className={S.link}>Base</a>
+            </li>
+            <li className="h-full">
+              <a className={S.link}>About</a>
+            </li>
+            <li className="h-full">
+              <a className={S.link}>Projects</a>
+            </li>
+            <li className="h-full">
+              <a className={S.link}>Work History</a>
+            </li>
+            <li className="h-full">
+              <a className={S.link}>Contact</a>
+            </li>
+            <li className="h-full flex center mx-3">
+              <a className="bg-brand-primary text-brand-blue-dark px-4 font-semibold py-2 rounded">
+                Resume
+              </a>
+            </li>
+          </ul>
+          <div className="md:hidden">
+            <CgMenuRightAlt className="w-7 h-7 text-white" />
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
