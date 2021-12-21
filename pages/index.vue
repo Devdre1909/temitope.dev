@@ -85,7 +85,7 @@
           </p>
           <p>
             Moving on to the present day, I have been privileged to work with a
-            an{" "}
+            an
             <a
               href="https://www.edulightconsulting.com.ng/"
               class="text-brand-primary hover:underline cursor-pointer"
@@ -94,18 +94,18 @@
             </a>
             , where I gained most of my experience in teaching, leadership,
             communication, management and engineering, also had my input, ideas
-            in startups like MyExtraSheet, {""}
+            in startups like MyExtraSheet,
             <a href="https://campusdash.com.ng/" class="styled-link">
               CampusDash
             </a>
-            ,{" "}
+            ,
             <a
               href="https://www.mymatacare.com/"
               target="_black"
               class="styled-link"
             >
               MataCare </a
-            >{" "} as a Frontend Lead/Developer.
+            >as a Frontend Lead/Developer.
           </p>
           <p>
             I've built product that solve real-life problems and help business
