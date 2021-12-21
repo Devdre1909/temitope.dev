@@ -1,5 +1,12 @@
 <template>
   <div>
+    <a
+      ref="githubLink"
+      href="https://github.com/devdre1909"
+      target="_blank"
+      class="hidden"
+    >
+    </a>
     Redirecting to Github ...
   </div>
 </template>
@@ -8,7 +15,7 @@
 export default {
   name: 'GithubPage',
   mounted() {
-    window.open('https://github.com/devdre1909', '_blank');
+    this.$refs.githubLink.click()
     this.$router.push('/')
   },
 }

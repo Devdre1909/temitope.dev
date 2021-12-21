@@ -1,5 +1,12 @@
 <template>
   <div>
+    <a
+      ref="twitterLink"
+      href="https://twitter.com/devtemitope"
+      target="_blank"
+      class="hidden"
+    >
+    </a>
     Redirecting to twitter ...
   </div>
 </template>
@@ -8,7 +15,7 @@
 export default {
   name: 'TwitterPage',
   mounted() {
-    window.open('https://twitter.com/devtemitope', '_blank');
+    this.$refs.twitterLink.click()
     this.$router.push('/')
   },
 }

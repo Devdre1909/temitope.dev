@@ -1,5 +1,12 @@
 <template>
   <div>
+    <a
+      ref="linkedinLink"
+      href="https://www.linkedin.com/in/dtemitope/"
+      target="_blank"
+      class="hidden"
+    >
+    </a>
     Redirecting to LinkedIn ...
   </div>
 </template>
@@ -8,7 +15,7 @@
 export default {
   name: 'LinkedInPage',
   mounted() {
-    window.open('https://www.linkedin.com/in/dtemitope/', '_blank');
+    this.$refs.linkedinLink.click()
     this.$router.push('/')
   },
 }
