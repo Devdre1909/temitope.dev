@@ -23,6 +23,8 @@
           </li>
           <li class="h-full flex center mx-3">
             <a
+              download
+              :href="MyCV"
               class="bg-brand-primary text-brand-blue-dark px-4 font-semibold py-2 rounded"
             >
               Resume
@@ -38,8 +40,16 @@
 </template>
 
 <script>
+
+import MyCV from '~/assets/docs/adegoke_temitope_cv.pdf'
+
 export default {
   name: 'NavbarComponent',
+  data () {
+    return {
+      MyCV
+    }
+  },
 }
 </script>
 
@@ -53,7 +63,7 @@ export default {
   @apply h-full flex justify-center items-center text-white px-4 cursor-pointer relative;
 }
 
-.link::after{
+.link::after {
   @apply bg-brand-primary;
   content: '';
   height: 0px;
@@ -69,7 +79,7 @@ export default {
   @apply text-brand-dark-body;
 }
 
-.link:hover::after{
+.link:hover::after {
   height: 100%;
 }
 </style>
