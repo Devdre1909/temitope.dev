@@ -1,12 +1,14 @@
-import CampusDashImage from '~/assets/images/projects/campusdash.png'
-import ChuuseImage from '~/assets/images/projects/chuuse.png'
-import LearnPower from '~/assets/images/projects/learnpower.png'
-import legalNaija from '~/assets/images/projects/legal-naija.png'
-import MillionaireExchange from '~/assets/images/projects/millionaire-exchange.png'
-import MyExtraSheet from '~/assets/images/projects/myextrasheet.png'
-import PrinceDeMartitime from '~/assets/images/projects/prince-de-maritime.png'
-import SnappyExchange from '~/assets/images/projects/snappy-exchange.png'
-import MataCare from '~/assets/images/projects/matacare.png'
+import CampusDashImage from '~/assets/images/projects/campusdash.webp'
+import ChuuseImage from '~/assets/images/projects/chuuse.webp'
+import LearnPower from '~/assets/images/projects/learnpower.webp'
+import legalNaija from '~/assets/images/projects/legal-naija.webp'
+import MillionaireExchange from '~/assets/images/projects/millionaire-exchange.webp'
+import MyExtraSheet from '~/assets/images/projects/myextrasheet.webp'
+import PrinceDeMartitime from '~/assets/images/projects/prince-de-maritime.webp'
+import SnappyExchange from '~/assets/images/projects/snappy-exchange.webp'
+import MataCare from '~/assets/images/projects/matacare.webp'
+import SnappyExchangeUserDashboard from '~/assets/images/projects/snappyexchange-user-dashboard.webp'
+import PenalougeWaiting from '~/assets/images/projects/penalogue.webp'
 
 export const projects = [
   {
@@ -16,6 +18,14 @@ export const projects = [
     link: 'https://campusdash.com.ng',
     stack: ['Nextjs', 'React', 'Tailwindcss', 'Firebase', 'Netlify', 'Github'],
     imageAlt: 'CampusDash developed by Adegoke Temitope',
+  },
+  {
+    name: "Penalogue Waiting",
+    description: "",
+    image: PenalougeWaiting,
+    link: "https://penalouge.com",
+    stack: ['HTML', 'CSS', 'JavaScript', 'Github', 'Tailwind'],
+    imageAlt: "Penalouge Waiting developed by Adegoke Temitope",
   },
   {
     name: 'Legal Naija',
@@ -32,6 +42,14 @@ export const projects = [
     link: 'https://matacare.health/',
     stack: ['React', 'Tailwindcss', 'Axios'],
     imageAlt: 'Adegoke Temitope',
+  },
+  {
+    name: 'Snappy Exchange User Dashboard',
+    description: '',
+    image: SnappyExchangeUserDashboard,
+    link: 'https://app.snappyexchange.com',
+    stack: ['Vue', 'Vuetify', 'Axios', 'Digital Ocean', 'REST API'],
+    imageAlt: 'Adegoke Temitope, Snappy Exchange User Dashboard',
   },
   {
     name: 'Snappy Exchange',
