@@ -24,7 +24,7 @@
           <li class="h-full flex center mx-3">
             <a
               download
-              :href="MyCV"
+              href="/docs/adegoke_temitope_cv.pdf"
               class="bg-brand-primary text-brand-blue-dark px-4 font-semibold py-2 rounded"
             >
               Resume
@@ -40,16 +40,8 @@
 </template>
 
 <script>
-
-import MyCV from '~/assets/docs/adegoke_temitope_cv.pdf'
-
 export default {
   name: 'NavbarComponent',
-  data () {
-    return {
-      MyCV
-    }
-  },
 }
 </script>
 
