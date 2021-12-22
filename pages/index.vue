@@ -77,7 +77,7 @@
         </div>
         <div class="text-[#EFEFEF] md:mt-10 mt-7 font-medium text-lg space-y-6">
           <p class="font-medium md:text-lg text-base">
-            Hi! I'm Temitope, an engineering anf tech enthusiast. My
+            Hi! I'm Temitope, an engineering and tech enthusiast. My
             interest in programming started out around 2016, when I had my first
             interaction with an android smartphone and most of the games I tried
             out didn't seem interesting enough, so I decided to find out
@@ -177,9 +177,9 @@
               </div>
             </div>
           </div>
-          <hr class="my-10" />
-          
+
         </div>
+         <hr class="my-10" />
       </div>
     </div>
 
