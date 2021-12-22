@@ -5,7 +5,7 @@
         <div>
           <a class="brand">DEVTEMITOPE</a>
         </div>
-        <ul class="hidden md:flex center h-full">
+        <ul class="hidden lg:flex center h-full">
           <li class="h-full">
             <a href="#base" class="link">Base</a>
           </li>
@@ -13,7 +13,7 @@
             <a href="#about" class="link">About</a>
           </li>
           <li class="h-full">
-            <a href="#project" class="link">Projects</a>
+            <a href="#projects" class="link">Projects</a>
           </li>
           <li class="h-full">
             <a href="#work-history" class="link">Work History</a>
@@ -31,7 +31,7 @@
             </a>
           </li>
         </ul>
-        <div class="md:hidden">
+        <div class="lg:hidden">
           <svg
             class="w-7 h-7 text-white"
             stroke="currentColor"

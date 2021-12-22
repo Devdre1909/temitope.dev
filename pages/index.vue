@@ -5,10 +5,10 @@
   >
     <NavbarVue />
 
-    <div class="md:h-screen w-full py-16">
-      <div class="spacing h-full md:flex">
+    <div class="lg:h-screen w-full py-16">
+      <div class="spacing h-full lg:flex">
         <nav
-          class="h-full md:flex hidden justify-center items-center fixed left-10"
+          class="h-full lg:flex hidden justify-center items-center fixed left-10"
         >
           <div class="space-y-8">
             <a
@@ -17,7 +17,7 @@
               class="nav-dot selected-circle"
             ></a>
             <a href="#about" data-title="About" class="nav-dot"></a>
-            <a href="#project" data-title="projects" class="nav-dot"></a>
+            <a href="#projects" data-title="projects" class="nav-dot"></a>
             <a
               href="#work-history"
               data-title="Work History"
@@ -26,14 +26,14 @@
             <a href="#contact" data-title="Contact" class="nav-dot"></a>
           </div>
         </nav>
-        <div class="flex h-full center md:w-8/12">
+        <div class="flex h-full center lg:w-8/12">
           <div>
             <h1
-              class="text-white font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left mt-5"
+              class="text-white font-bold text-5xl md:text-6xl lg:text-7xl text-center lg:text-left mt-5"
             >
               Building user centered, scalable, and accessible web apps
             </h1>
-            <div class="w-full flex justify-center md:justify-start mt-12">
+            <div class="w-full flex justify-center lg:justify-start mt-12">
               <a
                 href="#project"
                 class="rounded px-8 py-4 hover:bg-brand-primary hover:text-brand-dark-body transition-colors saturate-200 border-2 border-brand-primary text-brand-primary font-bold flex items-center space-x-3"
@@ -77,14 +77,14 @@
         </div>
         <div class="text-[#EFEFEF] md:mt-10 mt-7 font-medium text-lg space-y-6">
           <p class="font-medium md:text-lg text-base">
-            Hi!. I'm Temitope, and Engineering and Tech just fascinates me. My
+            Hi! I'm Temitope, an engineering anf tech enthusiast. My
             interest in programming started out around 2016, when I had my first
             interaction with an android smartphone and most of the games I tried
-            out just didn't seem interesting enough, so I decided to find out
-            how games are created.
+            out didn't seem interesting enough, so I decided to find out
+            how games were created.
           </p>
           <p>
-            Moving on to the present day, I have been privileged to work with a
+            Moving on to the present day, I have been privileged to work with
             an
             <a
               href="https://www.edulightconsulting.com.ng/"
@@ -108,11 +108,10 @@
             >as a Frontend Lead/Developer.
           </p>
           <p>
-            I've built product that solve real-life problems and help business
+            I've built products that solve real-life problems and help businesses
             automate processes with focus on user experience, fast delivery and
             high quality using advanced web technologies, and like some of my
-            clients world say "
-            <i>Damilare builds pixel perfect apps</i>". following the UI design
+            clients world say, "<i>Damilare builds pixel perfect apps</i>". following the UI design
             to detail.
           </p>
           <p>
@@ -134,7 +133,7 @@
           </div> -->
     </div>
 
-    <div id="project" class="py-16">
+    <div id="projects" class="py-16">
       <div class="spacing relative">
         <div
           class="relative md:overflow-visible overflow-x-hidden no-scrollbar"
@@ -182,14 +181,16 @@
       </div>
     </div>
 
-    <div id="wwork-history" class="py-16">
+    <div id="work-history" class="py-16">
       <div class="spacing relative">
         <div
           class="relative md:overflow-visible overflow-x-hidden no-scrollbar"
         >
           <p class="section-big-title">Work History</p>
           <h2 id="work" class="secondary-title">Some places I have worked</h2>
-          <p class="section-paragraph"></p>
+          <p class="section-paragraph">
+            Places I have worked, gathered experiences and offer solutions
+          </p>
         </div>
       </div>
       <div class="mt-10"></div>
@@ -331,9 +332,9 @@ I need your expertise on ...
 
     <div id="footer" class="py-10">
       <div class="spacing relative">
-        <div class="text-right text-white">
+        <div class="text-right text-white text-sm">
           <p class="text-opacity-50 text-white">
-            &copy; Designed and Built by Adegpke Temitope
+            &copy; Designed and Built by Adegoke Temitope
             <span class="text-brand-primary">&hearts;</span>
           </p>
           <p class="text-white text-opacity-50">
@@ -341,20 +342,20 @@ I need your expertise on ...
             <a
               href="https://nuxtjs.org"
               target="_blank"
-              class="hover:underline hover:text-brand-primary"
+              class="hover:underline hover:text-brand-primary text-opacity-40"
               >Nuxt.js</a
             >
             and hosted on
             <a
               href="https://vercel.com/"
               target="_blank"
-              class="hover:underline hover:text-brand-primary"
+              class="hover:underline hover:text-brand-primary text-opacity-40"
               >Vercel</a
             >. Source code available on
             <a
-              href="https://github.com"
+              href="https://github.com/devdre1909/portfolio-v1"
               target="_blank"
-              class="hover:underline hover:text-brand-primary"
+              class="hover:underline hover:text-brand-primary text-opacity-40"
               >Github</a
             >
           </p>
