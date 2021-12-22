@@ -258,7 +258,7 @@ I need your expertise on ...
                   <a href="tel:+2348160730668">+234 (0) 8160730068</a>
                 </p>
                 <a
-                  href="mailto:email@mydomain.com"
+                  href="mailto:adegoketemitope1909@gmail.com"
                   class="text-white underline mt-3 block"
                   >adegoketemitope1909@gmail.com</a
                 >
