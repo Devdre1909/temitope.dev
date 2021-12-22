@@ -96,6 +96,10 @@ export default {
      '@nuxtjs/sitemap'
   ],
 
+  sitemap: {
+    hostname: 'https://temitope.dev'
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: {

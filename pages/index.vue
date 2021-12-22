@@ -177,6 +177,8 @@
               </div>
             </div>
           </div>
+          <hr class="my-10" />
+          
         </div>
       </div>
     </div>
@@ -367,7 +369,7 @@ I need your expertise on ...
 
 <script>
 import NavbarVue from '~/components/Navbar.vue'
-import { projects } from '~/data/project'
+import { projects, personalProjects } from '~/data/project'
 
 export default {
   name: 'IndexPage',
@@ -377,6 +379,7 @@ export default {
   data() {
     return {
       projects,
+      personalProjects
     }
   },
 }
