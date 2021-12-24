@@ -1,7 +1,7 @@
 <template>
   <div
     id="base"
-    class="bg-brand-dark-body selection:bg-brand-primary selection:text-brand-dark-body"
+    class="dark:bg-brand-dark-body bg-gray-100 selection:bg-brand-primary selection:text-brand-dark-body duration-200 transition-colors"
   >
     <NavbarVue />
 
@@ -29,13 +29,13 @@
         <div class="flex h-full center lg:w-8/12">
           <div>
             <h1
-              class="text-white font-bold text-5xl md:text-6xl lg:text-7xl text-center lg:text-left mt-5"
+              class="dark:text-white text-brand-dark-body font-bold text-5xl md:text-6xl lg:text-7xl text-center lg:text-left mt-5"
             >
               Building user centered, scalable, and accessible web apps
             </h1>
             <div class="w-full flex justify-center lg:justify-start mt-12">
               <a
-                href="#project"
+                href="#projects"
                 class="rounded px-8 py-4 hover:bg-brand-primary hover:text-brand-dark-body transition-colors saturate-200 border-2 border-brand-primary text-brand-primary font-bold flex items-center space-x-3"
               >
                 <svg
@@ -75,20 +75,19 @@
           <h2 id="work" class="secondary-title">In the past years ...</h2>
           <p class="section-paragraph">A few things about me</p>
         </div>
-        <div class="text-[#EFEFEF] md:mt-10 mt-7 font-medium text-lg space-y-6">
+        <div class="dark:text-[#EFEFEF] text-brand-dark-body md:mt-10 mt-7 font-medium text-lg space-y-6">
           <p class="font-medium md:text-lg text-base">
-            Hi! I'm Temitope, an engineering and tech enthusiast. My
-            interest in programming started out around 2016, when I had my first
-            interaction with an android smartphone and most of the games I tried
-            out didn't seem interesting enough, so I decided to find out
-            how games were created.
+            Hi! I'm Temitope, an engineering and tech enthusiast. My interest in
+            programming started out around 2016, when I had my first interaction
+            with an android smartphone and most of the games I tried out didn't
+            seem interesting enough, so I decided to find out how games were
+            created.
           </p>
           <p>
-            Moving on to the present day, I have been privileged to work with
-            an
+            Moving on to the present day, I have been privileged to work with an
             <a
               href="https://www.edulightconsulting.com.ng/"
-              class="text-brand-primary hover:underline cursor-pointer"
+              class="styled-link"
             >
               IT consultancy agency
             </a>
@@ -108,11 +107,12 @@
             >as a Frontend Lead/Developer.
           </p>
           <p>
-            I've built products that solve real-life problems and help businesses
-            automate processes with focus on user experience, fast delivery and
-            high quality using advanced web technologies, and like some of my
-            clients world say, "<i>Damilare builds pixel perfect apps</i>". following the UI design
-            to detail.
+            I've built products that solve real-life problems and help
+            businesses automate processes with focus on user experience, fast
+            delivery and high quality using advanced web technologies, and like
+            some of my clients world say, "<i
+              >Damilare builds pixel perfect apps</i
+            >". following the UI design to detail.
           </p>
           <p>
             Recently, because of my lead roles I have been focusing more on
@@ -144,7 +144,10 @@
             Some of my resent works and personal projects
           </p>
         </div>
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div
+          class="hidden mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           <div
             v-for="(project, index) in projects"
             :key="index"
@@ -178,8 +181,74 @@
             </div>
           </div>
 
+          <div
+            v-for="project in personalProjects"
+            :key="project.name"
+            class="bg-white rounded shadow p-5"
+          >
+            <h3 class="text-brand-dark-body text-xl font-bold">
+              <a :href="project.links.url" class=""> {{ project.name }}</a>
+            </h3>
+            <p class="text-base text-gray-500 leading-relaxed mt-5">
+              {{ project.description }}
+            </p>
+            <div class="flex mt-5 flex-wrap">
+              <span
+                v-for="(tag, i) in project.stack"
+                :key="i"
+                class="text-brand-dark-body mr-2 text-sm capitalize"
+              >
+                {{ tag }} {{ i !== project.stack.length - 1 ? '|' : '' }}
+              </span>
+            </div>
+            <div class="flex mt-5">
+              <a class="text-sm" :href="project.links.github">View on Github</a>
+            </div>
+          </div>
         </div>
-         <hr class="my-10" />
+
+        <div class="flex flex-col mt-10 z-20 space-y-16">
+          <div
+            v-for="project in projects"
+            :key="project.name"
+            class="md:flex items-start justify-start relative"
+          >
+            <div class="group md:w-4/12 h-52 md:mr-5 relative mb-8 md:mb-0">
+              <div
+                class="absolute h-52 bg-brand-primary w-full filter group-hover:rotate-0  duration-200 transition-all rotate-2 z-0 top-0 left-0"
+              ></div>
+              <div class="h-52 shadow-lg relative group-hover:rotate-0 duration-200 transition-all group-hover:scale-105 -rotate-2 overflow-clip">
+                <img
+                  :src="project.image"
+                  :alt="project.imageAlt"
+                  class="filter object-cover relative"
+                />
+              </div>
+            </div>
+
+            <div class="md:w-8/12 md:ml-5">
+              <div class="px-5">
+                <h4 class="dark:text-white text-brand-dark-body font-semibold text-2xl after-underline">
+                  <a target="_blank" :href="project.link">
+                    {{ project.name }}
+                  </a>
+                </h4>
+                 <div class="flex mt-5 flex-wrap">
+                  <span
+                    v-for="(tag, i) in project.stack"
+                    :key="i"
+                    class="text-brand-primary mr-2 text-base capitalize"
+                  >
+                    {{ tag }} {{ i !== project.stack.length - 1 ? '|' : '' }}
+                  </span>
+                </div>
+                <p class="mt-5 dark:text-white text-brand-dark-body text-lg font-light">
+                  {{ project.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -215,7 +284,7 @@
             <div class="md:w-7/12">
               <div class="space-y-10">
                 <div>
-                  <label class="text-white block mb-4 text-xl font-bold"
+                  <label class="dark:text-white text-brand-dark-body block mb-4 text-xl font-bold"
                     >Name</label
                   >
                   <input
@@ -223,7 +292,7 @@
                   />
                 </div>
                 <div>
-                  <label class="text-white block mb-4 text-xl font-bold"
+                  <label class="dark:text-white text-brand-dark-body block mb-4 text-xl font-bold"
                     >Email</label
                   >
                   <input
@@ -232,7 +301,7 @@
                   />
                 </div>
                 <div>
-                  <label class="text-white block mb-4 text-xl font-bold"
+                  <label class="dark:text-white text-brand-dark-body block mb-4 text-xl font-bold"
                     >Message</label
                   >
                   <textarea
@@ -254,12 +323,12 @@ I need your expertise on ...
             <div class="md:w-5/12">
               <div class="mt-12">
                 <!-- Contact info -->
-                <p class="text-white underline">
+                <p class="dark:text-white text-brand-dark-body underline">
                   <a href="tel:+2348160730668">+234 (0) 8160730068</a>
                 </p>
                 <a
                   href="mailto:adegoketemitope1909@gmail.com"
-                  class="text-white underline mt-3 block"
+                  class="dark:text-white text-brand-dark-body underline mt-3 block"
                   >adegoketemitope1909@gmail.com</a
                 >
 
@@ -271,7 +340,7 @@ I need your expertise on ...
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
-                      class="stroke-current text-white"
+                      class="stroke-current dark:text-white text-brand-dark-body"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -296,7 +365,7 @@ I need your expertise on ...
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="stroke-current text-white"
+                      class="stroke-current dark:text-white text-brand-dark-body"
                     >
                       <path
                         d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
@@ -315,7 +384,7 @@ I need your expertise on ...
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="stroke-current text-white"
+                      class="stroke-current dark:text-white text-brand-dark-body"
                     >
                       <path
                         d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
@@ -334,12 +403,12 @@ I need your expertise on ...
 
     <div id="footer" class="py-10">
       <div class="spacing relative">
-        <div class="text-right text-white text-sm">
-          <p class="text-opacity-50 text-white">
+        <div class="lg:text-right text-center dark:text-white text-brand-dark-body text-sm">
+          <p class="text-opacity-50 dark:text-white text-brand-dark-body">
             &copy; Designed and Built by Adegoke Temitope
             <span class="text-brand-primary">&hearts;</span>
           </p>
-          <p class="text-white text-opacity-50">
+          <p class="dark:text-white text-brand-dark-body text-opacity-50">
             This site is built with
             <a
               href="https://nuxtjs.org"
@@ -379,7 +448,7 @@ export default {
   data() {
     return {
       projects,
-      personalProjects
+      personalProjects,
     }
   },
 }
