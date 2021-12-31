@@ -1,11 +1,6 @@
 <template>
-  <div
-    id="base"
-    class="dark:bg-brand-dark-body bg-gray-100 selection:bg-brand-primary selection:text-brand-dark-body duration-200 transition-colors"
-  >
-    <NavbarVue />
-
-    <div class="lg:h-screen w-full py-16">
+  <div id="base" class="">
+    <div class="lg:h-screen w-full">
       <div class="spacing h-full lg:flex">
         <nav
           class="h-full lg:flex hidden justify-center items-center fixed left-10"
@@ -75,8 +70,10 @@
           <h2 id="work" class="secondary-title">In the past years ...</h2>
           <p class="section-paragraph">A few things about me</p>
         </div>
-        <div class="dark:text-[#EFEFEF] text-brand-dark-body md:mt-10 mt-7 font-medium text-lg space-y-6">
-          <p class="font-medium md:text-lg text-base">
+        <div
+          class="dark:text-[#EFEFEF] text-brand-dark-body md:mt-10 mt-7 font-medium text-lg space-y-6"
+        >
+          <p class="">
             Hi! I'm Temitope, an engineering and tech enthusiast. My interest in
             programming started out around 2016, when I had my first interaction
             with an android smartphone and most of the games I tried out didn't
@@ -215,25 +212,29 @@
           >
             <div class="group md:w-4/12 h-52 md:mr-5 relative mb-8 md:mb-0">
               <div
-                class="absolute h-52 bg-brand-primary w-full filter group-hover:rotate-0  duration-200 transition-all rotate-2 z-0 top-0 left-0"
+                class="absolute h-52 bg-brand-primary w-full filter group-hover:rotate-0 duration-200 transition-all rotate-2 z-0 top-0 left-0"
               ></div>
-              <div class="h-52 shadow-lg relative group-hover:rotate-0 duration-200 transition-all group-hover:scale-105 -rotate-2 overflow-clip">
+              <div
+                class="h-52 shadow-lg relative group-hover:rotate-0 duration-200 transition-all group-hover:scale-105 -rotate-2 overflow-hidden"
+              >
                 <img
                   :src="project.image"
                   :alt="project.imageAlt"
-                  class="filter object-cover relative"
+                  class="filter object-fill relative"
                 />
               </div>
             </div>
 
             <div class="md:w-8/12 md:ml-5">
               <div class="px-5">
-                <h4 class="dark:text-white text-brand-dark-body font-semibold text-2xl after-underline">
+                <h4
+                  class="dark:text-white text-brand-dark-body font-semibold text-2xl after-underline"
+                >
                   <a target="_blank" :href="project.link">
                     {{ project.name }}
                   </a>
                 </h4>
-                 <div class="flex mt-5 flex-wrap">
+                <div class="flex mt-5 flex-wrap">
                   <span
                     v-for="(tag, i) in project.stack"
                     :key="i"
@@ -242,7 +243,9 @@
                     {{ tag }} {{ i !== project.stack.length - 1 ? '|' : '' }}
                   </span>
                 </div>
-                <p class="mt-5 dark:text-white text-brand-dark-body text-lg font-light">
+                <p
+                  class="mt-5 dark:text-white text-brand-dark-body text-lg font-light"
+                >
                   {{ project.description }}
                 </p>
               </div>
@@ -284,7 +287,8 @@
             <div class="md:w-7/12">
               <div class="space-y-10">
                 <div>
-                  <label class="dark:text-white text-brand-dark-body block mb-4 text-xl font-bold"
+                  <label
+                    class="dark:text-white text-brand-dark-body block mb-4 text-xl font-bold"
                     >Name</label
                   >
                   <input
@@ -292,7 +296,8 @@
                   />
                 </div>
                 <div>
-                  <label class="dark:text-white text-brand-dark-body block mb-4 text-xl font-bold"
+                  <label
+                    class="dark:text-white text-brand-dark-body block mb-4 text-xl font-bold"
                     >Email</label
                   >
                   <input
@@ -301,7 +306,8 @@
                   />
                 </div>
                 <div>
-                  <label class="dark:text-white text-brand-dark-body block mb-4 text-xl font-bold"
+                  <label
+                    class="dark:text-white text-brand-dark-body block mb-4 text-xl font-bold"
                     >Message</label
                   >
                   <textarea
@@ -403,7 +409,9 @@ I need your expertise on ...
 
     <div id="footer" class="py-10">
       <div class="spacing relative">
-        <div class="lg:text-right text-center dark:text-white text-brand-dark-body text-sm">
+        <div
+          class="lg:text-right text-center dark:text-white text-brand-dark-body text-sm"
+        >
           <p class="text-opacity-50 dark:text-white text-brand-dark-body">
             &copy; Designed and Built by Adegoke Temitope
             <span class="text-brand-primary">&hearts;</span>
@@ -437,14 +445,11 @@ I need your expertise on ...
 </template>
 
 <script>
-import NavbarVue from '~/components/Navbar.vue'
 import { projects, personalProjects } from '~/data/project'
 
 export default {
   name: 'IndexPage',
-  components: {
-    NavbarVue,
-  },
+  components: {},
   data() {
     return {
       projects,

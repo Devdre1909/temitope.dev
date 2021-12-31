@@ -1,25 +1,28 @@
 <template>
-  <div class="h-16 fixed w-full shadow-md dark:bg-brand-dark-body bg-white z-10">
+  <div class="h-16 fixed w-full shadow-md bg-transparent filter backdrop-blur-lg z-10">
     <div class="spacing h-full">
       <div class="flex w-full h-full items-center justify-between">
         <div>
-          <a class="brand">DEVTEMITOPE</a>
+          <nuxt-link to="/" class="brand">DEVTEMITOPE</nuxt-link>
         </div>
         <ul class="hidden lg:flex center h-full">
           <li class="h-full">
-            <a href="#base" class="link">Base</a>
+            <nuxt-link to="/#base" class="link">Base</nuxt-link>
           </li>
           <li class="h-full">
-            <a href="#about" class="link">About</a>
+            <nuxt-link to="/#about" class="link">About</nuxt-link>
           </li>
           <li class="h-full">
-            <a href="#projects" class="link">Projects</a>
+            <nuxt-link to="/#projects" class="link">Projects</nuxt-link>
           </li>
           <li class="h-full">
-            <a href="#work-history" class="link">Work History</a>
+            <nuxt-link to="/#work-history" class="link">Work History</nuxt-link>
           </li>
           <li class="h-full">
-            <a href="#contact" class="link">Contact</a>
+            <nuxt-link to="/writings" class="link">Writing</nuxt-link>
+          </li>
+          <li class="h-full">
+            <nuxt-link to="/#contact" class="link">Contact</nuxt-link>
           </li>
           <li class="h-full flex center mx-3">
             <a

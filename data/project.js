@@ -60,7 +60,7 @@ export const projects = [
   },
   {
     name: 'Snappy Exchange User Dashboard',
-    description: 'The web app runs a RESTFUL API backend built with NodeJS, the frontend with has two dashboard was built with VueJS and Vuetify, uses Vuex of State management',
+    description: 'The web app runs a RESTFUL API backend built with NodeJS, the frontend has two dashboard, was built with VueJS and Vuetify, uses Vuex of State management',
     image: SnappyExchangeUserDashboard,
     link: 'https://app.snappyexchange.com',
     stack: ['Vue', 'Vuetify', 'Axios', 'Digital Ocean', 'REST API'],
@@ -87,12 +87,12 @@ export const projects = [
     description: '',
     image: ChuuseImage,
     link: 'https://chuuse.org',
-    stack: ['Vue', 'Tailewind'],
+    stack: ['Vue', 'Tailwind'],
     imageAlt: 'Chuuse, Adegoke Temitope',
   },
   {
     name: 'LearnPower',
-    description: 'This educational platform runs on a PHP/Laravel backend providing RESTful API for the frontend whicj was built with React and Charka UI for a UI Library, it uses just Context API for State management',
+    description: 'This educational platform runs on a PHP/Laravel backend providing RESTful API for the frontend which was built with React and Charka UI for a UI Library, it uses just Context API for State management',
     image: LearnPower,
     link: 'https://learnpower.ng',
     stack: ['React', 'Chakra UI', 'AWS', 'Tailwind', 'Redux', 'Github'],
