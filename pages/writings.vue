@@ -14,7 +14,7 @@
         <nuxt-link to="/twitter" class="styled-link">Twitter</nuxt-link> .
       </p>
     </section>
-    <section class="">
+    <section v-if="!articles.length === 0" class="">
       <nuxt-link
         v-for="(article, i) in articles"
         :key="i"
@@ -47,6 +47,11 @@
         </div>
         <p class="text-gray-500 mt-3">{{ article.description }}</p>
       </nuxt-link>
+    </section>
+    <section v-else>
+      <div class="mx-auto max-w-lg">
+        <img src="../assets/images/undraw_dog_walking_re_l61p.svg" />
+      </div>
     </section>
   </div>
 </template>

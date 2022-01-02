@@ -35,8 +35,13 @@ export default {
         name: 'twitter:description',
         content: 'Front-End Developer from Akure. Nigeria',
       },
-
+      {
+        name: 'twitter:image:src',
+        content: 'https://temitope.dev/images/me/temitope-adegoke.png',
+      },
       { content: 'https://temitope.dev/', property: 'twitter:url' },
+
+
       { content: 'https://temitope.dev/', property: 'og:url' },
       {
         content: 'Adegoke Temitope - Front-End Developer from Akure, Nigeria',
@@ -46,7 +51,16 @@ export default {
         content: 'Front-End Developer from Akure. Nigeria',
         property: 'og:description',
       },
-      { content: 'https://temitope.dev/', property: 'og:url' },
+      {
+        content: 'https://temitope.dev/images/me/temitope-adegoke.png',
+        property: 'og:image',
+      },
+      {
+        property: 'og:image:alt',
+        content: 'Adegoke Temitope - Front-End Developer from Akure, Nigeria',
+      },
+      { property: 'og:site_name', content: 'Adegoke Temitope' },
+      { property: 'og:type', content: 'website' },
 
       { name: 'format-detection', content: 'telephone=no' },
     ],
