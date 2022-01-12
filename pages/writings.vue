@@ -1,5 +1,7 @@
 <template>
-  <div class="spacing relative min-h-screen text-gray-500 dark:text-gray-400 pb-10">
+  <div
+    class="spacing relative min-h-screen text-gray-500 dark:text-gray-400 pb-10"
+  >
     <section class="py-16">
       <p>
         All articles are written by
@@ -66,8 +68,12 @@ export default {
     },
   },
   async asyncData({ $content, params }) {
-    const articles = await $content('articles').fetch()
-    return { articles }
+    try {
+      const articles = await $content('articles').fetch()
+      return { articles }
+    } catch (e) {
+      console.log(e)
+    }
   },
 }
 </script>

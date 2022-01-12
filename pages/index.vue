@@ -322,7 +322,7 @@ I need your expertise on ...
                 <button
                   class="px-8 py-3 rounded shadow-md bg-brand-primary text-brand-dark-body font-bold"
                 >
-                  Send it!
+                  Send it 
                 </button>
               </div>
             </div>
@@ -330,7 +330,7 @@ I need your expertise on ...
               <div class="mt-12">
                 <!-- Contact info -->
                 <p class="dark:text-white text-brand-dark-body underline">
-                  <a href="tel:+2348160730668">+234 (0) 8160730068</a>
+                  <a href="tel:+2348160730668">+234 (0) 8160730668</a>
                 </p>
                 <a
                   href="mailto:adegoketemitope1909@gmail.com"
