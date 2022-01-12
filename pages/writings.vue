@@ -68,12 +68,15 @@ export default {
     },
   },
   async asyncData({ $content, params }) {
-    try {
-      const articles = await $content('articles').fetch()
-      return { articles }
-    } catch (e) {
-      console.log(e)
-    }
+    // try {
+    //   const articles = await $content('articles').fetch()
+    //   return { articles }
+    // } catch (e) {
+    //   console.log(e)
+    // }
   },
+  data: () => ({
+    articles: [],
+  }),
 }
 </script>
