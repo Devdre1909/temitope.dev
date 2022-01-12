@@ -29,12 +29,12 @@ export const projects = [
     stack: ['HTML', 'CSS', 'JavaScript', 'Github', 'Tailwind'],
     imageAlt: 'Penalouge Waiting developed by Adegoke Temitope',
   },
-   {
+  {
     name: 'Dotenv Intellisense',
     description:
       'When building Application in VSCode, in most cases there are sensitive data which are written in a .env file, I created a VS Code extension that scans .env files within a workspace and provide Autocomplete which reduces Copy and Paste between files. The project was built with Typescript',
-     stack: ['vscode', 'vscode-extension', 'typescript'],
-     image: 'https://via.placeholder.com/1000?text=DotenvIntellisense',
+    stack: ['vscode', 'vscode-extension', 'typescript'],
+    image: 'https://via.placeholder.com/1000?text=DotenvIntellisense',
     link: 'https://marketplace.visualstudio.com/items?itemName=temitope1909.dotenv-intellisense',
     links: {
       github: 'https://github.com/Devdre1909/dotenv-intellisence',
@@ -59,8 +59,27 @@ export const projects = [
     imageAlt: 'Adegoke Temitope',
   },
   {
+    name: 'Blibiba Office',
+    description:
+      'Blibiba is a virtual workplace where teams come to work each day, side-by-side, no matter their locations. The Blibiba Office Layout allows individuals to be visible and present with colleagues in their online office, bringing real-time collaboration to life. The project was built with Vue on the frontend and NodeJS on the backend, real-time collaboration is achieved using Socket.io and all data is stored in a MongoDB database.',
+    stack: [
+      'NodeJs',
+      'MongoDB',
+      'Mongoose',
+      'Socket.io',
+      'Express',
+      'Vue',
+      'CPanel',
+      'REST API',
+      'Axios',
+    ],
+    image: 'https://via.placeholder.com/1000?text=BlibibaOffice',
+    link: 'https://marketplace.zoom.us/apps/CpZEvw_YSyOh_DTdRrd8og',
+  },
+  {
     name: 'Snappy Exchange User Dashboard',
-    description: 'The web app runs a RESTFUL API backend built with NodeJS, the frontend has two dashboard, was built with VueJS and Vuetify, uses Vuex of State management',
+    description:
+      'The web app runs a RESTFUL API backend built with NodeJS, the frontend has two dashboard, was built with VueJS and Vuetify, uses Vuex of State management',
     image: SnappyExchangeUserDashboard,
     link: 'https://app.snappyexchange.com',
     stack: ['Vue', 'Vuetify', 'Axios', 'Digital Ocean', 'REST API'],
@@ -68,7 +87,8 @@ export const projects = [
   },
   {
     name: 'Snappy Exchange',
-    description: 'The website of the the web app before this, built with NuxtJS and TailwindCSS',
+    description:
+      'The website of the the web app before this, built with NuxtJS and TailwindCSS',
     image: SnappyExchange,
     link: 'https://snappyexchange.com/',
     stack: ['Nuxt', 'TailwindCSS', 'Digital Ocean', 'REST API', 'Axios'],
@@ -92,7 +112,8 @@ export const projects = [
   },
   {
     name: 'LearnPower',
-    description: 'This educational platform runs on a PHP/Laravel backend providing RESTful API for the frontend which was built with React and Charka UI for a UI Library, it uses just Context API for State management',
+    description:
+      'This educational platform runs on a PHP/Laravel backend providing RESTful API for the frontend which was built with React and Charka UI for a UI Library, it uses just Context API for State management',
     image: LearnPower,
     link: 'https://learnpower.ng',
     stack: ['React', 'Chakra UI', 'AWS', 'Tailwind', 'Redux', 'Github'],
@@ -115,6 +136,4 @@ export const projects = [
   },
 ]
 
-export const personalProjects = [
-
-]
+export const personalProjects = []
