@@ -1,5 +1,7 @@
 <template>
-  <div class="h-16 fixed w-full shadow-md bg-transparent filter backdrop-blur-lg z-10">
+  <div
+    class="h-16 fixed w-full shadow-md bg-transparent filter backdrop-blur-lg z-10"
+  >
     <div class="spacing h-full">
       <div class="flex w-full h-full items-center justify-between">
         <div>
@@ -115,8 +117,9 @@ export default {
   mounted() {
     const userTheme = localStorage.getItem(themeKey)
 
-    if (!userTheme) {
+    if (userTheme === null) {
       localStorage.setItem(themeKey, 'dark')
+      window.location.reload()
     }
 
     if (

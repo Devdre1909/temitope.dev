@@ -41,7 +41,6 @@ export default {
       },
       { content: 'https://temitope.dev/', property: 'twitter:url' },
 
-
       { content: 'https://temitope.dev/', property: 'og:url' },
       {
         content: 'Adegoke Temitope - Front-End Developer from Akure, Nigeria',
@@ -66,8 +65,6 @@ export default {
     ],
 
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-
-    _dangerouslyDisableSanitizers: ['script', 'innerHTML'],
 
     script: [
       {
@@ -107,12 +104,28 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-     '@nuxt/content',
-     '@nuxtjs/sitemap'
+    '@nuxt/content',
+    '@nuxtjs/axios',
+    [
+      'nuxt-mail',
+      {
+        message: {
+          to: 'adegoketemitope1909@gmail.com',
+        },
+        smtp: {
+          service: 'gmail',
+          auth: {
+            user: process.env.NUXT_APP_GOOGLE_MAIL,
+            pass: process.env.NUXT_APP_GOOGLE_PASSWORD,
+          },
+        },
+      },
+    ],
+    '@nuxtjs/sitemap',
   ],
 
   sitemap: {
-    hostname: 'https://temitope.dev'
+    hostname: 'https://temitope.dev',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

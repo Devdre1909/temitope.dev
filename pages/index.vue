@@ -292,6 +292,7 @@
                     >Name</label
                   >
                   <input
+                    v-model="message.name"
                     class="w-full border-2 bg-slate-200 rounded px-3 py-3 focus:outline-none focus:border-brand-primary"
                   />
                 </div>
@@ -301,6 +302,7 @@
                     >Email</label
                   >
                   <input
+                    v-model="message.email"
                     type="Email"
                     class="w-full border-2 bg-slate-200 rounded px-3 py-3 focus:outline-none focus:border-brand-primary"
                   />
@@ -311,6 +313,7 @@
                     >Message</label
                   >
                   <textarea
+                    v-model="message.message"
                     type="email"
                     rows="5"
                     class="w-full border-2 bg-slate-200 rounded px-3 py-3 focus:outline-none focus:border-brand-primary resize-none"
@@ -320,9 +323,12 @@ I need your expertise on ...
                   </textarea>
                 </div>
                 <button
-                  class="px-8 py-3 rounded shadow-md bg-brand-primary text-brand-dark-body font-bold"
+                  class="send-btn"
+                  :disabled="disableSendButton"
+                  :data-title="disableSendButton ? 'Please fill a message' : ''"
+                  @click="sendMessage"
                 >
-                  Send it 
+                  {{ sendingMessage }}
                 </button>
               </div>
             </div>
@@ -454,7 +460,60 @@ export default {
     return {
       projects,
       personalProjects,
+      message: {
+        name: '',
+        email: '',
+        message: '',
+      },
+      sendingMessage: 'Send it!',
     }
+  },
+  computed: {
+    disableSendButton() {
+      return !this.message.message
+    },
+  },
+  methods: {
+    async sendMessage() {
+      this.sendingMessage = 'Sending...'
+      await this.$mail.send({
+        from: this.message.name || this.message.email,
+        subject: `Message from Portfolio - ${
+          this.message.name || this.message.email
+        }`,
+        text: this.message.message,
+      })
+      this.sendingMessage = 'Message sent!'
+      this.message = {
+        name: '',
+        email: '',
+        message: '',
+      }
+      setTimeout(() => {
+        this.sendingMessage = 'Send it!'
+      }, 3000)
+    },
   },
 }
 </script>
+
+<style scoped>
+.send-btn {
+  @apply px-8 py-3 rounded shadow-md bg-brand-primary text-brand-dark-body font-bold disabled:bg-gray-500 disabled:cursor-not-allowed relative;
+}
+
+.send-btn:hover::after {
+  opacity: 1;
+}
+
+.send-btn::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.3s ease;
+  @apply text-sm font-normal w-full;
+}
+</style>
