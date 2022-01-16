@@ -106,26 +106,15 @@ export default {
   modules: [
     '@nuxt/content',
     '@nuxtjs/axios',
-    [
-      'nuxt-mail',
-      {
-        message: {
-          to: 'adegoketemitope1909@gmail.com',
-        },
-        smtp: {
-          service: 'gmail',
-          auth: {
-            user: process.env.NUXT_APP_GOOGLE_MAIL,
-            pass: process.env.NUXT_APP_GOOGLE_PASSWORD,
-          },
-        },
-      },
-    ],
     '@nuxtjs/sitemap',
   ],
 
   sitemap: {
     hostname: 'https://temitope.dev',
+  },
+
+  axios: {
+    baseURL: 'https://devtemitope-api.herokuapp.com',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

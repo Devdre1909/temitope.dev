@@ -476,13 +476,7 @@ export default {
   methods: {
     async sendMessage() {
       this.sendingMessage = 'Sending...'
-      await this.$mail.send({
-        from: this.message.name || this.message.email,
-        subject: `Message from Portfolio - ${
-          this.message.name || this.message.email
-        }`,
-        text: this.message.message,
-      })
+      await this.$axios.post('/send/mail', this.message)
       this.sendingMessage = 'Message sent!'
       this.message = {
         name: '',
