@@ -168,11 +168,11 @@ export default {
 .link::after {
   @apply bg-brand-primary;
   content: '';
-  height: 0px;
+  height: 0;
   width: 100%;
   position: absolute;
-  top: 0;
   left: 0;
+  bottom: 0;
   transition: all 200ms ease-in-out;
   z-index: -1;
 }
@@ -182,6 +182,8 @@ export default {
 }
 
 .link:hover::after {
+  top: 0;
   height: 100%;
 }
+
 </style>
