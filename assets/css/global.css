@@ -98,7 +98,11 @@ html.dark .section-big-title{
 }
 
 .selected-circle {
-  @apply border-gray-500 bg-brand-primary transform rotate-45;
+  @apply border-gray-500 bg-brand-primary transform rotate-180 animate-spin;
+}
+
+.selected-circle:hover {
+  @apply rotate-0;
 }
 
 .nav-dot:hover span {

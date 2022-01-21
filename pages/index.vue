@@ -1,24 +1,36 @@
 <template>
-  <div id="base" class="">
-    <div class="lg:h-screen w-full">
+  <div class="">
+    <div id="base" class="lg:h-screen w-full observe">
       <div class="spacing h-full lg:flex">
         <nav
           class="h-full lg:flex hidden justify-center items-center fixed left-10"
         >
           <div class="space-y-8">
+            <a id="dot-base" href="#base" data-title="Base" class="nav-dot"></a>
             <a
-              href="#base"
-              data-title="Base"
-              class="nav-dot selected-circle"
+              id="dot-about"
+              href="#about"
+              data-title="About"
+              class="nav-dot"
             ></a>
-            <a href="#about" data-title="About" class="nav-dot"></a>
-            <a href="#projects" data-title="projects" class="nav-dot"></a>
             <a
+              id="dot-projects"
+              href="#projects"
+              data-title="projects"
+              class="nav-dot"
+            ></a>
+            <a
+              id="dot-work-history"
               href="#work-history"
               data-title="Work History"
               class="nav-dot"
             ></a>
-            <a href="#contact" data-title="Contact" class="nav-dot"></a>
+            <a
+              id="dot-contact"
+              href="#contact"
+              data-title="Contact"
+              class="nav-dot"
+            ></a>
           </div>
         </nav>
         <div class="flex h-full center lg:w-8/12">
@@ -61,7 +73,7 @@
       </div>
     </div>
 
-    <div id="about" class="py-16">
+    <div id="about" class="observe py-16">
       <div class="spacing relative">
         <div
           class="relative md:overflow-visible overflow-x-hidden no-scrollbar"
@@ -130,7 +142,7 @@
           </div> -->
     </div>
 
-    <div id="projects" class="py-16">
+    <div id="projects" class="observe py-16">
       <div class="spacing relative">
         <div
           class="relative md:overflow-visible overflow-x-hidden no-scrollbar"
@@ -164,7 +176,7 @@
                     {{ project.name }}
                   </a>
                 </h4>
-                <p>{{ project.description }}</p>
+                <p class="text-sm">{{ project.description }}</p>
                 <div class="flex mt-5 flex-wrap">
                   <span
                     v-for="(tag, i) in project.stack"
@@ -255,7 +267,7 @@
       </div>
     </div>
 
-    <div id="work-history" class="py-16">
+    <div id="work-history" class="observe py-16">
       <div class="spacing relative">
         <div
           class="relative md:overflow-visible overflow-x-hidden no-scrollbar"
@@ -270,7 +282,7 @@
       <div class="mt-10"></div>
     </div>
 
-    <div id="contact" class="py-16">
+    <div id="contact" class="observe py-16">
       <div class="spacing relative">
         <div
           class="relative md:overflow-visible overflow-x-hidden no-scrollbar"
@@ -413,7 +425,7 @@ I need your expertise on ...
       </div>
     </div>
 
-    <div id="footer" class="py-10">
+    <div id="footer" class="observe py-10">
       <div class="spacing relative">
         <div
           class="lg:text-right text-center dark:text-white text-brand-dark-body text-sm"

@@ -17,5 +17,31 @@ export default {
   components: {
     NavbarVue,
   },
+  mounted() {
+    const elements = document.querySelectorAll('.observe')
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id
+            const dot = document.getElementById(`dot-${id}`)
+            dot.classList.add('selected-circle')
+          } else {
+            const id = entry.target.id
+            const dot = document.getElementById(`dot-${id}`)
+            dot.classList.remove('selected-circle')
+          }
+        })
+      },
+      {
+        threshold: 0.1,
+      }
+    )
+
+    elements.forEach((element) => {
+      observer.observe(element)
+    })
+  },
 }
 </script>

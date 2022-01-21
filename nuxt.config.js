@@ -1,3 +1,6 @@
+const env = process.env.NODE_ENV
+const isDev = env === 'development'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -73,12 +76,12 @@ export default {
         async: true,
         defer: true,
       },
-      {
+      isDev ? {} : {
         hid: 'gtm-script-2',
         src: '/js/gtag.js',
         defer: true,
       },
-      {
+      isDev ? {} : {
         hid: 'microsoft-clarity-script',
         type: 'text/javascript',
         src: 'js/microsoftc.js',
