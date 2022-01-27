@@ -154,68 +154,6 @@
           </p>
         </div>
 
-        <div
-          class="hidden mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          <div
-            v-for="(project, index) in projects"
-            :key="index"
-            target="_blank"
-            :href="project.link"
-            class="group block hover:border hover:shadow-md hover:grayscale-0 grayscale filter border-brand-primary h-72 overflow-hidden relative"
-          >
-            <div class="relative">
-              <img :src="project.image" :alt="project.imageAlt" />
-            </div>
-            <div
-              class="group-hover:max-h-full max-h-full md:max-h-0 overflow-hidden transition-all duration-200 absolute bottom-0 bg-brand-dark-body w-full"
-            >
-              <div class="p-5">
-                <h4 class="text-white font-semibold text-xl after-underline">
-                  <a target="_blank" :href="project.link">
-                    {{ project.name }}
-                  </a>
-                </h4>
-                <p class="text-sm">{{ project.description }}</p>
-                <div class="flex mt-5 flex-wrap">
-                  <span
-                    v-for="(tag, i) in project.stack"
-                    :key="i"
-                    class="text-brand-primary mr-2 text-xs capitalize"
-                  >
-                    {{ tag }} {{ i !== project.stack.length - 1 ? '|' : '' }}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div
-            v-for="project in personalProjects"
-            :key="project.name"
-            class="bg-white rounded shadow p-5"
-          >
-            <h3 class="text-brand-dark-body text-xl font-bold">
-              <a :href="project.links.url" class=""> {{ project.name }}</a>
-            </h3>
-            <p class="text-base text-gray-500 leading-relaxed mt-5">
-              {{ project.description }}
-            </p>
-            <div class="flex mt-5 flex-wrap">
-              <span
-                v-for="(tag, i) in project.stack"
-                :key="i"
-                class="text-brand-dark-body mr-2 text-sm capitalize"
-              >
-                {{ tag }} {{ i !== project.stack.length - 1 ? '|' : '' }}
-              </span>
-            </div>
-            <div class="flex mt-5">
-              <a class="text-sm" :href="project.links.github">View on Github</a>
-            </div>
-          </div>
-        </div>
-
         <div class="flex flex-col mt-10 z-20 space-y-16">
           <div
             v-for="project in projects"
