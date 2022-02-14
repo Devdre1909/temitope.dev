@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
 html,
 body {
@@ -45,7 +46,7 @@ body::-webkit-scrollbar-track {
 }
 
 .secondary-title {
-  @apply md:text-3xl text-2xl font-bold dark:text-white text-brand-dark-body relative;
+  @apply md:text-3xl text-2xl font-bold dark:text-white text-brand-dark-body relative font-major-mono-display;
   z-index: 2;
 }
 

@@ -36,7 +36,7 @@
         <div class="flex h-full center lg:w-8/12">
           <div>
             <h1
-              class="dark:text-white text-brand-dark-body font-bold text-5xl md:text-6xl lg:text-7xl text-center lg:text-left mt-5"
+              class="dark:text-white text-brand-dark-body font-bold text-4xl md:text-5xl lg:text-7xl text-center lg:text-left mt-5 font-major-mono-display"
             >
               Building user centered, scalable, and accessible web apps
             </h1>
