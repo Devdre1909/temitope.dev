@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Adegoke Temitope - Front-End Developer from Akure, Nigeria',
+    title: 'Adegoke Temitope - Fullstack Engineer/UX Engineer, Nigeria',
     htmlAttrs: {
       lang: 'en',
     },
@@ -20,7 +20,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Front-End Developer from Akure. Nigeria',
+        content: 'Fullstack Engineer/UX Engineer, Nigeria',
       },
       {
         name: 'keywords',
@@ -32,11 +32,11 @@ export default {
       { name: 'twitter:creator', content: '@temitope_dev' },
       {
         name: 'twitter:title',
-        content: 'Adegoke Temitope - Front-End Developer from Akure, Nigeria',
+        content: 'Adegoke Temitope - Fullstack Engineer/UX Engineer, Nigeria',
       },
       {
         name: 'twitter:description',
-        content: 'Front-End Developer from Akure. Nigeria',
+        content: 'Fullstack Engineer/UX Engineer, Nigeria',
       },
       {
         name: 'twitter:image:src',
@@ -46,11 +46,11 @@ export default {
 
       { content: 'https://temitope.dev/', property: 'og:url' },
       {
-        content: 'Adegoke Temitope - Front-End Developer from Akure, Nigeria',
+        content: 'Adegoke Temitope - Fullstack Engineer/UX Engineer, Nigeria',
         property: 'og:title',
       },
       {
-        content: 'Front-End Developer from Akure. Nigeria',
+        content: 'Fullstack Engineer/UX Engineer, Nigeria',
         property: 'og:description',
       },
       {
@@ -59,7 +59,7 @@ export default {
       },
       {
         property: 'og:image:alt',
-        content: 'Adegoke Temitope - Front-End Developer from Akure, Nigeria',
+        content: 'Adegoke Temitope - Fullstack Engineer/UX Engineer, Nigeria',
       },
       { property: 'og:site_name', content: 'Adegoke Temitope' },
       { property: 'og:type', content: 'website' },
