@@ -1,0 +1,24 @@
+.preloader {
+  &__wrapper {
+    @apply bg-dark-400 h-screen fixed w-full;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+
+  &__textContainer {
+    @apply h-full flex items-center justify-center absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &__text {
+      @apply text-light-900 text-3xl absolute;
+      cursor: none;
+      // transform: translateX(-20px);
+    }
+  }
+}
