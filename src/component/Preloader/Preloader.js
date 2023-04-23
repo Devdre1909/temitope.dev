@@ -1,34 +1,12 @@
 "use client";
 
+import { useRef } from "react";
 import gsap from "gsap";
 
-import style from "./preloader.module.scss";
 import { useIsomorphicLayoutEffect } from "@/helpers/useIsomorphicLayoutEffect";
-import { useRef } from "react";
+import { welcomes } from "@/configs/constants";
 
-const WelcomeHello = [
-  "Bonjour",
-  "Hola",
-  "こんにちは",
-  "Sannu",
-  "مرحبًا",
-  "Hallo",
-  "Ciao",
-  "Olá",
-  "Здравствуйте",
-  "你好",
-  "안녕하세요",
-  "नमस्ते",
-  "Здраво",
-  "Привет",
-  "Hej",
-  "Sveiki",
-  "Halo",
-  "Hello",
-];
-
-const start = "M 0 100 V 50 Q 50 0 100 50 V 100 z";
-const end = "M 0 100 V 0 Q 50 0 100 0 V 100 z";
+import style from "./preloader.module.scss";
 
 export default function Preloader() {
   const trans = useRef(null);
@@ -63,7 +41,7 @@ export default function Preloader() {
   return (
     <main className={style.preloader__wrapper}>
       <div className={style.preloader__textContainer}>
-        {WelcomeHello.map((word, index) => {
+        {welcomes.map((word, index) => {
           return (
             <p
               key={index}
