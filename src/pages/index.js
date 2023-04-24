@@ -3,9 +3,9 @@ import Preloader from "@/component/Preloader/Preloader";
 
 export default function Home() {
   return (
-    <div className="h-full bg-dark-600">
+    <div className="h-full bg-dark-300">
       <Preloader />
-     <Minimalistic />
+      <Minimalistic />
     </div>
   );
 }

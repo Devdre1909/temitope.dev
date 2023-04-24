@@ -12,6 +12,15 @@ export default function Preloader() {
   const trans = useRef(null);
 
   useIsomorphicLayoutEffect(() => {
+    const hightlightColors = ["#61c9c9", "#7661c9", "#c7c961", "#c96161"];
+
+    const randomColor =
+      hightlightColors[Math.floor(Math.random() * hightlightColors.length)];
+    document.documentElement.style.setProperty(
+      "--hightlight-color",
+      randomColor
+    );
+
     const tl = gsap.timeline();
     const texts = document.querySelectorAll(
       `.${style.preloader__textContainer__text}`

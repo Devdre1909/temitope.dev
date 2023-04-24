@@ -1,4 +1,3 @@
-
 .container {
   @apply bg-dark-300;
 }
@@ -15,6 +14,8 @@
   @apply col-span-1 flex flex-col h-screen flex-1 items-start justify-between;
   padding: 8%;
   @apply border-r border-dark-500;
+  position: sticky;
+  top: 0;
 
   &__header {
     margin-top: 10%;
@@ -29,17 +30,15 @@
   }
 
   &__desc {
-    @apply text-light-500 font-MonaSans text-base mt-8 font-light;
+    @apply text-light-500 font-MonaSans mt-8 font-light text-sm;
     line-height: 1.4;
 
     &--highlight {
       @apply text-light-900;
     }
-
   }
 
   &__links {
-
   }
 
   &__link {
@@ -52,7 +51,6 @@
       margin: 0 10px;
       display: block;
     }
-
   }
 
   &__link:hover {
@@ -71,10 +69,9 @@
         height: 100%;
         filter: grayscale(1);
       }
-
     }
-    
-    &__links{
+
+    &__links {
       margin-top: 20px;
       @apply flex items-center justify-start space-x-4;
     }
@@ -86,24 +83,108 @@
         margin-left: 5px;
         @apply text-white;
       }
-
     }
-
   }
 
+  &__credit {
+    @apply mt-3 text-light-500 text-sm;
+
+    span {
+      @apply text-light-800 underline cursor-pointer;
+    }
+  }
 }
 
 .rightSide {
   @apply col-span-1;
   padding: 8%;
+  overflow-y: auto;
+
+  &__section-title {
+    @apply text-light-900 font-HubotSans text-sm font-normal mt-10 uppercase;
+  }
+
+  &__lists {
+    @apply flex flex-col space-y-4 mt-4;
+  }
+
+  &__list {
+    @apply bg-dark-700 rounded-md p-5;
+
+    &__title {
+      @apply text-light-900 font-HubotSans text-2xl font-semibold;
+    }
+
+    &__desc,
+    &__content {
+      @apply text-light-500 font-MonaSans text-sm mt-2 font-light;
+      line-height: 1.4;
+    }
+
+    &__content {
+      @apply text-sm mt-10;
+    }
+
+    &__footer {
+      @apply flex items-center justify-between mt-5;
+
+      a {
+        @apply text-light-500 font-MonaSans text-sm font-light flex items-center;
+
+        span {
+          @apply ml-2;
+        }
+      }
+    }
+  }
+
+  &__experience {
+    @apply bg-dark-700 rounded-md p-5;
+
+    &__title {
+      @apply text-light-900 font-HubotSans text-lg font-semibold;
+
+      a {
+        @apply text-[var(--hightlight-color)] font-bold;
+      }
+    }
+
+    &__time {
+      @apply text-light-500 font-MonaSans text-sm mt-1 font-light;
+    }
+
+    &__content {
+      @apply text-light-800 text-sm mt-10;
+
+      li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+
+        &::before {
+          content: "▹";
+          position: absolute;
+          left: 0px;
+          color: var(--hightlight-color);
+        }
+      }
+    }
+
+    &__techs {
+      @apply flex items-center justify-start mt-5 flex-wrap;
+
+      span {
+        @apply text-light-500 font-MonaSans text-xs font-light mr-2 uppercase;
+      }
+    }
+  }
 }
 
 .information {
-  @apply p-2 rounded-full bg-dark-700 text-light-900 font-MonaSans text-sm
+  @apply p-2 rounded-full bg-dark-700 text-light-900 font-MonaSans text-xs
   text-center;
 
-  a{
+  a {
     @apply underline;
   }
-
 }

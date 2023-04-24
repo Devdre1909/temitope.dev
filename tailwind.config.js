@@ -32,11 +32,12 @@ module.exports = {
           800: "#EAEAEB",
           900: "#FFFFFF",
         },
+        highlight: "#60e0cf",
       },
       fontFamily: {
-        'MonaSans': ['Mona Sans', 'sans-serif'],
-        'HubotSans': ['Hubot Sans', 'sans-serif'],
-      }
+        MonaSans: ["Mona Sans", "sans-serif"],
+        HubotSans: ["Hubot Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],
