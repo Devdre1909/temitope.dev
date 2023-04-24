@@ -1,3 +1,2 @@
-[Adegoke Temitope's Blog](temitope.dev)
-
-Created with Nuxt
+# Adegoke Temitope
+## Software Engineer (Frontend Heavy)

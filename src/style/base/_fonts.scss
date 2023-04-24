@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Hubot Sans';
+  src: url('../../fonts/HubotSans/Hubot-Sans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hubot Sans';
+  src: url('../../fonts/HubotSans/Hubot-Sans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hubot Sans';
+  src: url('../../fonts/HubotSans/Hubot-Sans-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('../../fonts/MonaSans/Mona-Sans-Bold.woff2') format('woff2'),
+       url('../../fonts/MonaSans/Mona-Sans-Bold.woff') format('woff');
+      //  url('../../fonts/MonaSans/Mona-Sans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('../../fonts/MonaSans/Mona-Sans-Light.woff2') format('woff2'),
+       url('../../fonts/MonaSans/Mona-Sans-Light.woff') format('woff');
+      //  url('../../fonts/MonaSans/Mona-Sans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('../../fonts/MonaSans/Mona-Sans-Medium.woff2') format('woff2'),
+       url('../../fonts/MonaSans/Mona-Sans-Medium.woff') format('woff');
+      //  url('../../fonts/MonaSans/Mona-Sans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mona Sans';
+  src: url('../../fonts/MonaSans/Mona-Sans-Regular.woff2') format('woff2'),
+       url('../../fonts/MonaSans/Mona-Sans-Regular.woff') format('woff');
+      //  url('../../fonts/MonaSans/Mona-Sans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Path: style\base\_fonts.scss
