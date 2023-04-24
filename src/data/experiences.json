@@ -1,6 +1,6 @@
 [
   {
-    "role": "Fullstack Engineer",
+    "role": "Fullstack Engineer/UX Engineer",
     "company": "Future Academy Africa",
     "link": "https://futureacademyafrica.africa/",
     "timeline": "February 2021 - Present",
@@ -16,6 +16,12 @@
     "role": "Vuex/Nuxt Engineer",
     "company": "Cygnisspin",
     "link": "https://cygnisspin.com/",
-    "timeline": "  January 2021 - Present"
+    "timeline": "January 2021 - Present",
+    "techs": "Vue, NuxtJS, Vuex, RaabbitMQ",
+    "activities": [
+      "Worked on a betting SAAS platform with multiple services and an existing codebase, utilizing a range of front-end and back-end technologies",
+      "Configured a real-time module on the betting system to process live games, enabling users to place bets on live games and enhancing the overall user experience",
+      "Successfully reduced server load by optimizing frontend API consumption, improving system performance and user experience by 6%"
+    ]
   }
 ]

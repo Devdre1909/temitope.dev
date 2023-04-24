@@ -7,15 +7,22 @@
 }
 
 .gridContainer {
-  @apply grid grid-cols-2 gap-10;
+  @apply grid grid-cols-1 gap-10;
+
+  @screen lg {
+    @apply grid grid-cols-2 gap-10;
+  }
 }
 
 .leftSide {
   @apply col-span-1 flex flex-col h-screen flex-1 items-start justify-between;
   padding: 8%;
   @apply border-r border-dark-500;
-  position: sticky;
   top: 0;
+
+  @screen lg {
+    position: sticky;
+  }
 
   &__header {
     margin-top: 10%;
@@ -73,11 +80,15 @@
 
     &__links {
       margin-top: 20px;
-      @apply flex items-center justify-start space-x-4;
+      @apply flex items-center justify-start flex-wrap;
+
+      @screen md {
+        @apply flex-grow-0;
+      }
     }
 
     &__link {
-      @apply flex items-center justify-start text-sm;
+      @apply flex items-center justify-start text-sm mr-4;
 
       span {
         margin-left: 5px;
@@ -96,9 +107,13 @@
 }
 
 .rightSide {
-  @apply col-span-1;
+  @apply col-span-1 mt-28;
   padding: 8%;
   overflow-y: auto;
+
+  @screen lg {
+    @apply mt-5;
+  }
 
   &__section-title {
     @apply text-light-900 font-HubotSans text-sm font-normal mt-10 uppercase;
@@ -187,4 +202,14 @@
   a {
     @apply underline;
   }
+}
+
+.skills {
+  @apply p-2 rounded bg-dark-700 text-light-900 font-MonaSans text-xs mt-8 mb-10;
+  line-height: 1.6;
+
+  @screen lg {
+    @apply mb-0;
+  }
+
 }

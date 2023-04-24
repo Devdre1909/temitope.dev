@@ -1,4 +1,4 @@
-import Minimalistic from "@/component/Preloader/Minimalistic/Minimalistic";
+import Minimalistic from "@/component/Minimalistic/Minimalistic";
 import Preloader from "@/component/Preloader/Preloader";
 
 export default function Home() {

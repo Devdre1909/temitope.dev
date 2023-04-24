@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./minimalistic.module.scss";
-
+import Experiences from "@/data/experiences.json";
 import MeImage from "@/assets/images/me-smiling.jpg";
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
@@ -44,7 +44,21 @@ const Minimalistic = () => {
                 , eager to expand my knowledge. Outside of work, I enjoy playing
                 games, hanging out with friends.
               </p>
+  
+              <p className={styles.skills}>
+                <p>✨</p>
+                <p>
+                  React, Vue, NuxtJS, NextJS, Typescript, Javascript, NodeJS,
+                  MongoDB, Redux, Jest, TailwindCSS, Design System, React
+                  Native, SCSS, Express, Jest, Charka UI
+                </p>
+                <p>
+                  Communication, Collaboration, Decision making, Management,
+                  ‘Can do’ Energy, Design Thinking
+                </p>
+              </p>
             </div>
+
             <div className={styles.leftSide__links}>
               <div className={styles.leftSide__link}>
                 00 <span className={styles.leftSide__link__line}></span> Recent
@@ -147,48 +161,28 @@ const Minimalistic = () => {
             </div>
             <h3 className={styles["rightSide__section-title"]}>Experience</h3>
             <div className={styles.rightSide__lists}>
-              <div className={styles.rightSide__experience}>
-                <h3 className={styles.rightSide__experience__title}>
-                  Fullstack Engineer{" "}
-                  <a href="https://futureacademy.africa">
-                    @ Future Academy Africa
-                  </a>
-                </h3>
-                <p className={styles.rightSide__experience__time}>
-                  February 2021 - Present
-                </p>
-                <ul className={styles.rightSide__experience__content}>
-                  <li>
-                    Develop v2 and v3 of Future Academy Africa’s landing page,
-                    which on v3 launch there was a 30% increase in time spent on
-                    the page per session after 2 months
-                  </li>
-                  <li>
-                    Thought a successful front-end development course, utilized
-                    by over 500 learners, teaching them how to build modern web
-                    applications with HTML, CSS, and Javascript
-                  </li>
-                  <li>
-                    Developed an e-learning mobile application using React
-                    Native available on iOS and Android providing learners with
-                    a different learning experience.
-                  </li>
-                  <li>
-                    Developed various products, including Future Academy
-                    Africa’s platform that manages over 5,000 student
-                    registrations, onboarding, and payments every 2-3 months.
-                    Integrating Stripe and Flutterwave solutions to handle both
-                    local and international payments.
-                  </li>
-                </ul>
-                <div className={styles.rightSide__experience__techs}>
-                  <span>React</span>
-                  <span>Vite</span> <span>Next</span> <span>Nuxt</span>{" "}
-                  <span>NodeJS</span> <span>Express</span> <span>MongoDB</span>{" "}
-                  <span>Jest</span> <span>React Native</span> <span>Expo</span>{" "}
-                  <span>Cypress</span>
-                </div>
-              </div>
+              {Experiences.map((ex) => (
+                <>
+                  <div className={styles.rightSide__experience}>
+                    <h3 className={styles.rightSide__experience__title}>
+                      {ex.role} <a href={ex.link}>@ {ex.company}</a>
+                    </h3>
+                    <p className={styles.rightSide__experience__time}>
+                      {ex.timeline}
+                    </p>
+                    <ul className={styles.rightSide__experience__content}>
+                      {ex.activities.map((activity, index) => (
+                        <li key={index}>{activity}</li>
+                      ))}
+                    </ul>
+                    <div className={styles.rightSide__experience__techs}>
+                      {ex.techs.split(",").map((tech, index) => (
+                        <span key={index}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              ))}
             </div>
           </div>
         </div>
