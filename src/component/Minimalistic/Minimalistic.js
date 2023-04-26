@@ -44,7 +44,7 @@ const Minimalistic = () => {
                 , eager to expand my knowledge. Outside of work, I enjoy playing
                 games, hanging out with friends.
               </p>
-  
+
               <p className={styles.skills}>
                 <p>✨</p>
                 <p>
