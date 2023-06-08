@@ -5,7 +5,12 @@ import Experiences from "@/data/experiences.json";
 import MeImage from "@/assets/images/me-smiling.jpg";
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
-import { SiReadthedocs } from "react-icons/si";
+import { HiDocument } from "react-icons/hi";
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import Experience from "@/components/Experience/Experience";
+import { WORKS } from "@/data/works";
+import Work from "../Work/Work";
+// import Masonry from "react-responsive-masonry";
 
 const Minimalistic = () => {
   return (
@@ -15,9 +20,7 @@ const Minimalistic = () => {
           <div className={styles.leftSide}>
             <div className={styles.leftSide__header}>
               <h1 className={styles.leftSide__title}>Adegoke Temitope</h1>
-              <h2 className={styles.leftSide__jobRole}>
-                Full stack Engineer (FE Heavy)
-              </h2>
+              <h2 className={styles.leftSide__jobRole}>Software Engineer</h2>
               <p className={styles.leftSide__desc}>
                 I am a{" "}
                 <span className={styles["leftSide__desc--highlight"]}>
@@ -45,18 +48,18 @@ const Minimalistic = () => {
                 games, hanging out with friends.
               </p>
 
-              <p className={styles.skills}>
-                <p>✨</p>
-                <p>
+              <div className={styles.skills}>
+                <p className={styles.star}>✨</p>
+                <p className="mb-1">
                   React, Vue, NuxtJS, NextJS, Typescript, Javascript, NodeJS,
                   MongoDB, Redux, Jest, TailwindCSS, Design System, React
-                  Native, SCSS, Express, Jest, Charka UI
+                  Native, SCSS, Express, Jest, Charka UI, MySQL, PostgreSQL
                 </p>
                 <p>
                   Communication, Collaboration, Decision making, Management,
-                  ‘Can do’ Energy, Design Thinking
+                  Design Thinking
                 </p>
-              </p>
+              </div>
             </div>
 
             <div className={styles.leftSide__links}>
@@ -107,20 +110,34 @@ const Minimalistic = () => {
                   target="_blank"
                   className={styles.leftSide__footer__link}
                 >
-                  <AiOutlineMail className="text-white w-6 h-6" />
+                  <MdOutlineAlternateEmail className="text-white w-6 h-6" />
                   <span>Email</span>
                 </a>
                 <a
-                  href="mailto:adegoketemitope1909@gmail.com"
+                  href="https://docs.google.com/document/d/1rSGPnZR-iseUdskzukjpou3AWpCsJxOFSfL4PLVLYa8/edit?usp=sharing"
                   target="_blank"
                   className={styles.leftSide__footer__link}
                 >
-                  <SiReadthedocs className="text-white w-6 h-6" />
+                  <HiDocument className="text-white w-6 h-6" />
                   <span>Resume</span>
                 </a>
               </div>
               <div className={styles.leftSide__credit}>
-                View <span>credits</span> for Inspiration
+                <div>
+                  View <span>credits</span> for Inspiration
+                  <div className={styles.leftSide__credit__list}>
+                    <p>
+                      <a href="https://www.sarahdayan.dev/" target="_blank">
+                        https://www.sarahdayan.dev/
+                      </a>
+                    </p>
+                    <p>
+                      <a href="https://dennissnellenberg.com/" target="_blank">
+                        https://dennissnellenberg.com/
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -162,26 +179,13 @@ const Minimalistic = () => {
             <h3 className={styles["rightSide__section-title"]}>Experience</h3>
             <div className={styles.rightSide__lists}>
               {Experiences.map((ex) => (
-                <>
-                  <div className={styles.rightSide__experience}>
-                    <h3 className={styles.rightSide__experience__title}>
-                      {ex.role} <a href={ex.link}>@ {ex.company}</a>
-                    </h3>
-                    <p className={styles.rightSide__experience__time}>
-                      {ex.timeline}
-                    </p>
-                    <ul className={styles.rightSide__experience__content}>
-                      {ex.activities.map((activity, index) => (
-                        <li key={index}>{activity}</li>
-                      ))}
-                    </ul>
-                    <div className={styles.rightSide__experience__techs}>
-                      {ex.techs.split(",").map((tech, index) => (
-                        <span key={index}>{tech}</span>
-                      ))}
-                    </div>
-                  </div>
-                </>
+                <Experience key={ex.title} ex={ex} />
+              ))}
+            </div>
+            <h3 className={styles["rightSide__section-title"]}>WORKS</h3>
+            <div className="grid md:grid-cols-2 grid-cols-1 mt-2 gap-2">
+              {WORKS.map((work) => (
+              <Work key={work.image} work={work} />
               ))}
             </div>
           </div>

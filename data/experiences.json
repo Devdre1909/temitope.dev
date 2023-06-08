@@ -1,0 +1,52 @@
+[
+  {
+    "role": "Frontend React Developer",
+    "company": "Pade HCM",
+    "link": "https://www.padehcm.com",
+    "timeline": "Contract (3 months)",
+    "techs": "React, Typescript, NodeJS, Figma, Zustand",
+    "activities": [
+      "Designed and implemented code structures, rules, and boilerplate for my team, ensuring consistent and efficient development practices",
+      "Developed multiple reusable and accessible components using TypeScript"
+    ]
+  },
+  {
+    "role": "Fullstack Engineer/UX Engineer",
+    "company": "Future Academy Africa",
+    "link": "https://futureacademy.africa",
+    "timeline": "May 2022 - Present",
+    "techs": "React, Vite, Next, Nuxt, NodeJS, Express, MongoDB, Jest, React Native, Expo, Cypress, Figma, UI Design, MySQL",
+    "activities": [
+      "Planned, designed, built, tested, and oversaw the development of various products, resulting in reduced overhead and launch time.",
+      "Managed and developed the landing page for Future Academy Africa, which experienced a 30% increase in time spent on the page per session within two months of its v3 launch.",
+      "Taught a successful front-end development course to over 500 learners, guiding them on building modern web applications using HTML, CSS, and JavaScript.",
+      "Developed an e-learning mobile application using React Native, available on both iOS and Android platforms, providing learners with a unique learning experience.",
+      "Developed multiple products, including Future Academy Africa's platform, which efficiently manages over 5,000 student registrations, onboarding processes, and payments every 2-3 months. Integrated Stripe and Flutterwave solutions to handle both local and international payments."
+    ]
+  },
+  {
+    "role": "Vuex/Nuxt Engineer",
+    "company": "Cygnisspin",
+    "link": "https://www.cygnusspin.com",
+    "timeline": "January 2021 - May 2022",
+    "techs": "Vue, NuxtJS, Vuex, RaabbitMQ",
+    "activities": [
+      "Worked on a betting SAAS platform with multiple services and an existing codebase, utilizing a range of front-end and back-end technologies",
+      "Configured a real-time module on the betting system to process live games, enabling users to place bets on live games and enhancing the overall user experience",
+      "Successfully reduced server load by optimizing frontend API consumption, improving system performance and user experience by 6%"
+    ]
+  },
+  {
+    "role": "Full Stack Engineer",
+    "company": "EduLight Consulting",
+    "link": "https://www.edulightconsulting.com.ng",
+    "timeline": "Aug 2017 - January 2022",
+    "techs": "React, Vue, Nuxt, Node, MySQL, MongoDB, SocketIO, WordPress",
+    "activities": [
+      "Converted Figma design to pixel-perfect, responsive websites and sometimes adaptive websites",
+      "Communicated with various clients and stakeholders, providing technical advice on projects across various domains",
+      "Enforced high engineering standards across team projects via PR reviews while leading a team of 2-3 as lead engineer",
+      "Successfully built, tested, and deployed over 5 web applications in various domains such as Finance, e-Commerce, Content Management, Human Resource Management, and more."
+    ]
+  }
+]

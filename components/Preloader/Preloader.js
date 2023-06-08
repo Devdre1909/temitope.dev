@@ -45,6 +45,7 @@ export default function Preloader() {
       duration: 1.5,
       ease: "Power2.easeInOut",
     });
+    
   }, []);
 
   return (
