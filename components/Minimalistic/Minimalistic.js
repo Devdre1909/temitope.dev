@@ -113,11 +113,9 @@ const Minimalistic = () => {
                 <p className="mb-1">
                   React, Vue, NuxtJS, NextJS, Typescript, Javascript, NodeJS,
                   MongoDB, Redux, Jest, TailwindCSS, Design System, React
-                  Native, SCSS, Express, Jest, Charka UI, MySQL, PostgreSQL
-                </p>
-                <p>
-                  Communication, Collaboration, Decision making, Management,
-                  Design Thinking
+                  Native, Styled Component, SCSS, Express, Jest, Charka UI,
+                  MySQL, PostgreSQL, Chart.js, D3.js, AWS, Sentry, Microsoft
+                  Clarity, Flipper, Web 3, Storybook, Cypress
                 </p>
               </motion.div>
             </div>
