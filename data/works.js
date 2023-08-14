@@ -31,7 +31,7 @@ export const WORKS = [
   },
   {
     image: IleojaImage,
-    title: "Ileoga",
+    title: "Ileoja",
     description: "E-commerce marketplace",
     link: "https://ileoja.ng/",
     tools: ["Nuxt 2", "TailwindCSS", "Vuex"],

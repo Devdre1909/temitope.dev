@@ -7,11 +7,16 @@ import { useIsomorphicLayoutEffect } from "@/helpers/useIsomorphicLayoutEffect";
 import { welcomes } from "@/configs/constants";
 
 import style from "./preloader.module.scss";
+import minimalisticStyle from "@/components/Minimalistic/minimalistic.module.scss";
 
-export default function Preloader() {
+export default function Preloader({ onComplete }) {
   const trans = useRef(null);
 
   useIsomorphicLayoutEffect(() => {
+    // const wrapperEl = document.querySelector(`.${minimalisticStyle.wrapper}`);
+
+    // wrapperEl.style.overflow = "hidden";
+
     const hightlightColors = ["#61c9c9", "#7661c9", "#c7c961", "#c96161"];
 
     const randomColor =
@@ -21,7 +26,14 @@ export default function Preloader() {
       randomColor
     );
 
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({
+      onComplete: () => {
+        setTimeout(() => {
+          onComplete && onComplete();
+        }, 1200);
+      },
+    });
+
     const texts = document.querySelectorAll(
       `.${style.preloader__textContainer__text}`
     );
@@ -45,7 +57,8 @@ export default function Preloader() {
       duration: 1.5,
       ease: "Power2.easeInOut",
     });
-    
+
+    // wrapperEl.style.overflow = "unset";
   }, []);
 
   return (

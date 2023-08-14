@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import styles from "./minimalistic.module.scss";
@@ -10,7 +12,9 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 import Experience from "@/components/Experience/Experience";
 import { WORKS } from "@/data/works";
 import Work from "../Work/Work";
+import classNames from "classnames";
 // import Masonry from "react-responsive-masonry";
+import { motion } from "framer-motion";
 
 const Minimalistic = () => {
   return (
@@ -19,9 +23,52 @@ const Minimalistic = () => {
         <div className={styles.gridContainer}>
           <div className={styles.leftSide}>
             <div className={styles.leftSide__header}>
-              <h1 className={styles.leftSide__title}>Adegoke Temitope</h1>
-              <h2 className={styles.leftSide__jobRole}>Software Engineer</h2>
-              <p className={styles.leftSide__desc}>
+              <motion.h1
+                initial={{
+                  opacity: 0,
+                  y: 10,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+                className={styles.leftSide__title}
+              >
+                Adegoke Temitope
+              </motion.h1>
+              <motion.h2
+                initial={{
+                  opacity: 0,
+                  y: 10,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  delay: 0.5,
+                }}
+                className={styles.leftSide__jobRole}
+              >
+                Software Engineer
+              </motion.h2>
+              <motion.p
+                initial={{
+                  opacity: 0,
+                  y: 10,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  delay: 1.0,
+                }}
+                className={styles.leftSide__desc}
+              >
                 I am a{" "}
                 <span className={styles["leftSide__desc--highlight"]}>
                   Fullstack Developer with over 4 years of experience
@@ -46,9 +93,22 @@ const Minimalistic = () => {
                 </span>
                 , eager to expand my knowledge. Outside of work, I enjoy playing
                 games, hanging out with friends.
-              </p>
+              </motion.p>
 
-              <div className={styles.skills}>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 10,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  delay: 1.5,
+                }}
+                className={styles.skills}
+              >
                 <p className={styles.star}>✨</p>
                 <p className="mb-1">
                   React, Vue, NuxtJS, NextJS, Typescript, Javascript, NodeJS,
@@ -59,10 +119,23 @@ const Minimalistic = () => {
                   Communication, Collaboration, Decision making, Management,
                   Design Thinking
                 </p>
-              </div>
+              </motion.div>
             </div>
 
-            <div className={styles.leftSide__links}>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 10,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                delay: 2,
+              }}
+              className={styles.leftSide__links}
+            >
               <div className={styles.leftSide__link}>
                 00 <span className={styles.leftSide__link__line}></span> Recent
               </div>
@@ -73,12 +146,25 @@ const Minimalistic = () => {
               <div className={styles.leftSide__link}>
                 02 <span className={styles.leftSide__link__line}></span> Works
               </div>
-              <div className={styles.leftSide__link}>
+              {/* <div className={styles.leftSide__link}>
                 03 <span className={styles.leftSide__link__line}></span>{" "}
                 Personal
-              </div>
-            </div>
-            <div className={styles.leftSide__footer}>
+              </div> */}
+            </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 10,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                delay: 2.5,
+              }}
+              className={styles.leftSide__footer}
+            >
               <div className={styles.leftSide__footer__imageWrapper}>
                 <Image
                   src={MeImage}
@@ -139,9 +225,22 @@ const Minimalistic = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
-          <div className={styles.rightSide}>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 10,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 3.5,
+            }}
+            className={styles.rightSide}
+          >
             <p className={styles.information}>
               ✨ Presently open to freelance work. Contact me on{" "}
               <a href="mailto:adegoketemitope1909@gmail.com">
@@ -182,13 +281,17 @@ const Minimalistic = () => {
                 <Experience key={ex.title} ex={ex} />
               ))}
             </div>
-            <h3 className={styles["rightSide__section-title"]}>WORKS</h3>
+            <h3
+              className={classNames(styles["rightSide__section-title"], "mb-4")}
+            >
+              WORKS
+            </h3>
             <div className="grid md:grid-cols-2 grid-cols-1 mt-2 gap-2">
               {WORKS.map((work) => (
-              <Work key={work.image} work={work} />
+                <Work key={work.image} work={work} />
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
