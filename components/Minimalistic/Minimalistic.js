@@ -135,14 +135,14 @@ const Minimalistic = () => {
               className={styles.leftSide__links}
             >
               <div className={styles.leftSide__link}>
-                00 <span className={styles.leftSide__link__line}></span> Recent
+                <span className={styles.leftSide__link__line}></span> Recent
               </div>
               <div className={styles.leftSide__link}>
-                01 <span className={styles.leftSide__link__line}></span>{" "}
+                <span className={styles.leftSide__link__line}></span>{" "}
                 Experience
               </div>
               <div className={styles.leftSide__link}>
-                02 <span className={styles.leftSide__link__line}></span> Works
+                <span className={styles.leftSide__link__line}></span> Works
               </div>
               {/* <div className={styles.leftSide__link}>
                 03 <span className={styles.leftSide__link__line}></span>{" "}

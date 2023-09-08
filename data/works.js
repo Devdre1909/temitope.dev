@@ -1,5 +1,5 @@
 import WoodchipNGImage from "@/assets/works/woodchipng.webp";
-// import BlackboardImage from "@/assets/works/blackboard.webp";
+import BlackboardImage from "@/assets/works/blackboardlearning.png";
 import FaaImage from "@/assets/works/faa.webp";
 import IleojaImage from "@/assets/works/ileoja.webp";
 import LearnpoertImage from "@/assets/works/learnpower.webp";
@@ -8,6 +8,13 @@ import PadeImage from "@/assets/works/pade.webp";
 import PenaloungeImage from "@/assets/works/penalounge.webp";
 
 export const WORKS = [
+  {
+    image: BlackboardImage,
+    title: "blackboardlearning",
+    description: "e-learning platform",
+    link: "https://www.blackboardlearning.co/",
+    tools: ["React", "TailwindCSS", "NextJS", "PostgeSQL", "NodeJS", "Express"],
+  },
   {
     image: PadeImage,
     title: "Pade HCM",

@@ -1,5 +1,20 @@
 [
   {
+    "role": "Full Stack Engineer",
+    "company": "blackboardlearning",
+    "link": "https://www.blackboardlearning.co",
+    "timeline": "",
+    "techs": "React, Next, Node, Express, PostgreSQL, MySQL, Figma, UI Design",
+    "activities": [
+      "Led all aspects of software development for the project, utilizing a monorepo architecture for streamlined development.",
+      "Created and managed the admin side, enabling stakeholders to view statistics and manage videos.",
+      "Integrated DigitalOcean Spaces for video storage and management, optimizing content delivery and reducing video loading times by 40%.",
+      "Collaborated closely with the design team to ensure an intuitive user interface.",
+      "Worked directly with stakeholders to gather and implement project requirements.",
+      "Successfully launched the MVP, resulting in a 25% increase in user engagement within the first months."
+    ]
+  },
+  {
     "role": "Frontend React Developer",
     "company": "Pade HCM",
     "link": "https://www.padehcm.com",
