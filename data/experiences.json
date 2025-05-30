@@ -1,67 +1,87 @@
 [
   {
-    "role": "Full Stack Engineer",
-    "company": "blackboardlearning",
-    "link": "https://www.blackboardlearning.co",
-    "timeline": "",
-    "techs": "React, Next, Node, Express, PostgreSQL, MySQL, Figma, UI Design",
+    "role": "Fullstack Engineer / Mobile Engineer",
+    "company": "Pika Insights",
+    "location": "Lagos, Nigeria",
+    "timeline": "November 2024 - Present",
+    "link": "https://www.pikainsights.com",
+    "techs": "React Native, Next.js, Node.js, MongoDB, MySQL, AWS (S3, CloudFront), GraphQL, Firebase, PostHog",
     "activities": [
-      "Led all aspects of software development for the project, utilizing a monorepo architecture for streamlined development.",
-      "Created and managed the admin side, enabling stakeholders to view statistics and manage videos.",
-      "Integrated DigitalOcean Spaces for video storage and management, optimizing content delivery and reducing video loading times by 40%.",
-      "Collaborated closely with the design team to ensure an intuitive user interface.",
-      "Worked directly with stakeholders to gather and implement project requirements.",
-      "Successfully launched the MVP, resulting in a 25% increase in user engagement within the first months."
+      "Develop a React Native mobile app for sales and inventory management, supporting over 1,000 businesses managing 4,000+ products.",
+      "Collaborate with the product team, leveraging PostHog analytics to incorporate user feedback and enhance app functionality.",
+      "Design Node.js and MongoDB backend services for efficient data storage and processing.",
+      "Implement AWS S3 for image uploads and CloudFront for optimized content delivery.",
+      "Build a Next.js admin dashboard for FMCG brand performance analytics, integrating GraphQL APIs for seamless data visualization.",
+      "Leverage MySQL, Airflow, and Firebase for scalable application workflows."
     ]
   },
   {
-    "role": "Frontend React Developer",
-    "company": "Pade HCM",
-    "link": "https://www.padehcm.com",
-    "timeline": "Contract (3 months)",
-    "techs": "React, Typescript, NodeJS, Figma, Zustand",
+    "role": "Engineering Manager",
+    "company": "Learnpally",
+    "location": "Lagos, Nigeria",
+    "timeline": "February 2024 – Present",
+    "link": "https://www.learnpally.com",
+    "techs": "React, React Native, Node.js, MongoDB, PostgreSQL, Ollama, Stripe, Flutterwave",
     "activities": [
-      "Designed and implemented code structures, rules, and boilerplate for my team, ensuring consistent and efficient development practices",
-      "Developed multiple reusable and accessible components using TypeScript"
+      "Lead a team of engineers, managing task assignments, conducting code reviews, and implementing process improvements to enhance development efficiency.",
+      "Spearhead a Coursera-like e-learning platform, including a React Native mobile app for on-the-go learning and a React web app for online education.",
+      "Architect a Node.js backend for course enrollment, certificate generation, and video processing (transcoding to 420p, 720p, 1080p for adaptive streaming), eliminating user complaints about video access on low-end devices and poor networks.",
+      "Integrate payment infrastructure using Stripe and Flutterwave for secure course purchases.",
+      "Utilize MongoDB, PostgreSQL, and Ollama to ensure robust data management and platform scalability."
     ]
   },
   {
-    "role": "Fullstack Engineer/UX Engineer",
+    "role": "Fullstack Engineer / UX Engineer",
     "company": "Future Academy Africa",
-    "link": "https://futureacademy.africa",
-    "timeline": "May 2022 - Present",
-    "techs": "React, Vite, Next, Nuxt, NodeJS, Express, MongoDB, Jest, React Native, Expo, Cypress, Figma, UI Design, MySQL",
+    "location": "Lagos, Nigeria",
+    "timeline": "May 2022 – February 2024",
+    "link": "https://www.futureacademy.africa",
+    "techs": "React, React Native, Next.js, Nuxt.js, Node.js, Express, MongoDB, MySQL, Jest, Cypress, Figma, DigitalOcean Spaces",
     "activities": [
-      "Planned, designed, built, tested, and oversaw the development of various products, resulting in reduced overhead and launch time.",
-      "Managed and developed the landing page for Future Academy Africa, which experienced a 30% increase in time spent on the page per session within two months of its v3 launch.",
-      "Taught a successful front-end development course to over 500 learners, guiding them on building modern web applications using HTML, CSS, and JavaScript.",
-      "Developed an e-learning mobile application using React Native, available on both iOS and Android platforms, providing learners with a unique learning experience.",
-      "Developed multiple products, including Future Academy Africa's platform, which efficiently manages over 5,000 student registrations, onboarding processes, and payments every 2-3 months. Integrated Stripe and Flutterwave solutions to handle both local and international payments."
+      "Developed an e-learning platform and React Native mobile app, handling 5,000+ student registrations and payments every 2–3 months.",
+      "Enhanced landing page UX, increasing session duration by 30% within two months of v3 launch.",
+      "Taught front-end development to 500+ learners, covering HTML, CSS, and JavaScript.",
+      "Integrated Stripe and Flutterwave for seamless payment processing and DigitalOcean Spaces for video storage, reducing load times by 40%.",
+      "Led development using a mono repo architecture for streamlined workflows."
     ]
   },
   {
-    "role": "Vuex/Nuxt Engineer",
-    "company": "Cygnisspin",
+    "role": "React Developer (Contract)",
+    "company": "Pade HCM",
+    "location": "Lagos, Nigeria",
+    "timeline": "3-Month Contract, 2023",
+    "link": "https://www.padehcm.com",
+    "techs": "React, TypeScript, Node.js, Zustand, Figma",
+    "activities": [
+      "Established code structures, rules, and boilerplates, improving team development consistency.",
+      "Built reusable, accessible React components using TypeScript and Zustand for state management."
+    ]
+  },
+  {
+    "role": "Vue/Nuxt Developer",
+    "company": "Cygnusspin",
+    "location": "Ibadan, Nigeria",
+    "timeline": "January 2021 – May 2023",
     "link": "https://www.cygnusspin.com",
-    "timeline": "January 2021 - May 2022",
-    "techs": "Vue, NuxtJS, Vuex, RaabbitMQ",
+    "techs": "Vue, Nuxt.js, Vuex, RabbitMQ",
     "activities": [
-      "Worked on a betting SAAS platform with multiple services and an existing codebase, utilizing a range of front-end and back-end technologies",
-      "Configured a real-time module on the betting system to process live games, enabling users to place bets on live games and enhancing the overall user experience",
-      "Successfully reduced server load by optimizing frontend API consumption, improving system performance and user experience by 6%"
+      "Enhanced a betting SaaS platform by optimizing Vue and Nuxt.js frontend performance, reducing server load and improving UX by 6%.",
+      "Configured a real-time betting module using Vuex and RabbitMQ for live game processing."
     ]
   },
   {
-    "role": "Full Stack Engineer",
+    "role": "Fullstack Engineer",
     "company": "EduLight Consulting",
+    "location": "Ibadan, Nigeria",
+    "timeline": "August 2017 – January 2022",
     "link": "https://www.edulightconsulting.com.ng",
-    "timeline": "Aug 2017 - January 2022",
-    "techs": "React, Vue, Nuxt, Node, MySQL, MongoDB, SocketIO, WordPress",
+    "techs": "React, Vue, Nuxt.js, Node.js, MySQL, MongoDB, Socket.IO, WordPress",
     "activities": [
-      "Converted Figma design to pixel-perfect, responsive websites and sometimes adaptive websites",
-      "Communicated with various clients and stakeholders, providing technical advice on projects across various domains",
-      "Enforced high engineering standards across team projects via PR reviews while leading a team of 2-3 as lead engineer",
-      "Successfully built, tested, and deployed over 5 web applications in various domains such as Finance, e-Commerce, Content Management, Human Resource Management, and more."
+      "Led development of Snappy Exchange, a gift card and crypto exchange platform, handling billions in transactions for thousands of users, migrating from a legacy PHP system to a Vue and Node.js stack, significantly boosting performance.",
+      "Built and deployed 5+ web applications in finance, e-commerce, HR, and content management domains.",
+      "Converted Figma designs into pixel-perfect, responsive websites.",
+      "Led a team of 2–3 engineers, enforcing high standards through PR reviews.",
+      "Provided technical advisory to clients across various domains."
     ]
   }
 ]

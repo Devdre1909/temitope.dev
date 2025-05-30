@@ -64,6 +64,10 @@
     @apply text-light-500;
   }
 
+  &__link--active {
+    @apply text-light-800 underline;
+  }
+
   &__footer {
     &__imageWrapper {
       width: 55px;

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./minimalistic.module.scss";
 import Experiences from "@/data/experiences.json";
@@ -17,6 +17,37 @@ import classNames from "classnames";
 import { motion } from "framer-motion";
 
 const Minimalistic = () => {
+  const recentRef = useRef(null);
+  const experienceRef = useRef(null);
+  const worksRef = useRef(null);
+  const [activeSection, setActiveSection] = useState("recent");
+
+  // Scroll handler for active section
+  useEffect(() => {
+    const handleScroll = () => {
+      const recentTop = recentRef.current?.getBoundingClientRect().top ?? 0;
+      const experienceTop =
+        experienceRef.current?.getBoundingClientRect().top ?? 0;
+      const worksTop = worksRef.current?.getBoundingClientRect().top ?? 0;
+      const offset = 120; // adjust for sticky header if needed
+      if (window.scrollY + offset >= worksRef.current?.offsetTop) {
+        setActiveSection("works");
+      } else if (window.scrollY + offset >= experienceRef.current?.offsetTop) {
+        setActiveSection("experience");
+      } else {
+        setActiveSection("recent");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -53,7 +84,7 @@ const Minimalistic = () => {
                 }}
                 className={styles.leftSide__jobRole}
               >
-                Software Engineer
+                Fullstack Engineer
               </motion.h2>
               <motion.p
                 initial={{
@@ -69,30 +100,52 @@ const Minimalistic = () => {
                 }}
                 className={styles.leftSide__desc}
               >
-                I am a{" "}
+                Dynamic{" "}
                 <span className={styles["leftSide__desc--highlight"]}>
-                  Fullstack Developer with over 4 years of experience
+                  Fullstack Engineer
                 </span>{" "}
-                in designing and developing software solutions, over the years I
-                have successfully delivered{" "}
+                with over{" "}
                 <span className={styles["leftSide__desc--highlight"]}>
-                  stable, interactive and accessible web applications
+                  5 years of experience
                 </span>{" "}
-                for various domains. I have a talent for{" "}
+                delivering high-impact web and mobile solutions in{" "}
                 <span className={styles["leftSide__desc--highlight"]}>
-                  collaborating with both designers and engineers
-                </span>{" "}
-                to ensure an optimal web experience, while also building strong
-                relationships with my team and stakeholders. I am{" "}
-                <span className={styles["leftSide__desc--highlight"]}>
-                  committed to problem-solving
-                </span>{" "}
-                and always look for the best solutions. Additionally, I am a{" "}
-                <span className={styles["leftSide__desc--highlight"]}>
-                  lifelong learner
+                  education, finance, and e-commerce
                 </span>
-                , eager to expand my knowledge. Outside of work, I enjoy playing
-                games, hanging out with friends.
+                . Led development of innovative platforms, including a{" "}
+                <span className={styles["leftSide__desc--highlight"]}>
+                  Coursera-like e-learning system at Learnpally
+                </span>{" "}
+                and a{" "}
+                <span className={styles["leftSide__desc--highlight"]}>
+                  crypto exchange handling billions in transactions at EduLight
+                  Consulting
+                </span>
+                .
+                <br />
+                Excel in optimizing performance using{" "}
+                <span className={styles["leftSide__desc--highlight"]}>
+                  React, Node.js, and cloud technologies (AWS, DigitalOcean)
+                </span>
+                , while driving team success through{" "}
+                <span className={styles["leftSide__desc--highlight"]}>
+                  technical leadership
+                </span>{" "}
+                and{" "}
+                <span className={styles["leftSide__desc--highlight"]}>
+                  process improvements
+                </span>
+                .
+                <br />
+                Recognized for community contributions via{" "}
+                <span className={styles["leftSide__desc--highlight"]}>
+                  Dotenv Intellisense
+                </span>
+                , a popular VS Code extension, and a proven ability to transform{" "}
+                <span className={styles["leftSide__desc--highlight"]}>
+                  user feedback into scalable, user-centric applications
+                </span>
+                .
               </motion.p>
 
               <motion.div
@@ -111,11 +164,13 @@ const Minimalistic = () => {
               >
                 <p className={styles.star}>✨</p>
                 <p className="mb-1">
-                  React, Vue, NuxtJS, NextJS, Typescript, Javascript, NodeJS,
-                  MongoDB, Redux, Jest, TailwindCSS, Design System, React
-                  Native, Styled Component, SCSS, Express, Jest, Charka UI,
-                  MySQL, PostgreSQL, Chart.js, D3.js, AWS, Sentry, Microsoft
-                  Clarity, Flipper, Web 3, Storybook, Cypress
+                  React, React Native, Vue, Nuxt.js, Next.js, TypeScript,
+                  JavaScript, Zustand, Jest, Cypress, Playwright, Tailwind CSS,
+                  Design Systems, Figma, Node.js, Express, GraphQL, Socket.IO,
+                  RabbitMQ, MongoDB, MySQL, PostgreSQL, AWS (S3, CloudFront),
+                  DigitalOcean Spaces, Airflow, Firebase, Vite, Expo, WordPress,
+                  Mono Repo Architecture, Adaptive Video Streaming, Payment
+                  Integration (Stripe, Flutterwave)
                 </p>
               </motion.div>
             </div>
@@ -134,14 +189,30 @@ const Minimalistic = () => {
               }}
               className={styles.leftSide__links}
             >
-              <div className={styles.leftSide__link}>
+              <div
+                className={classNames(styles.leftSide__link, {
+                  [styles["leftSide__link--active"]]:
+                    activeSection === "recent",
+                })}
+                onClick={() => scrollToSection(recentRef)}
+              >
                 <span className={styles.leftSide__link__line}></span> Recent
               </div>
-              <div className={styles.leftSide__link}>
-                <span className={styles.leftSide__link__line}></span>{" "}
-                Experience
+              <div
+                className={classNames(styles.leftSide__link, {
+                  [styles["leftSide__link--active"]]:
+                    activeSection === "experience",
+                })}
+                onClick={() => scrollToSection(experienceRef)}
+              >
+                <span className={styles.leftSide__link__line}></span> Experience
               </div>
-              <div className={styles.leftSide__link}>
+              <div
+                className={classNames(styles.leftSide__link, {
+                  [styles["leftSide__link--active"]]: activeSection === "works",
+                })}
+                onClick={() => scrollToSection(worksRef)}
+              >
                 <span className={styles.leftSide__link__line}></span> Works
               </div>
               {/* <div className={styles.leftSide__link}>
@@ -239,6 +310,7 @@ const Minimalistic = () => {
             }}
             className={styles.rightSide}
           >
+            <div ref={recentRef} />
             <p className={styles.information}>
               ✨ Presently open to freelance work. Contact me on{" "}
               <a href="mailto:adegoketemitope1909@gmail.com">
@@ -273,12 +345,14 @@ const Minimalistic = () => {
                 </div>
               </div>
             </div>
+            <div ref={experienceRef} />
             <h3 className={styles["rightSide__section-title"]}>Experience</h3>
             <div className={styles.rightSide__lists}>
               {Experiences.map((ex) => (
                 <Experience key={ex.title} ex={ex} />
               ))}
             </div>
+            <div ref={worksRef} />
             <h3
               className={classNames(styles["rightSide__section-title"], "mb-4")}
             >
