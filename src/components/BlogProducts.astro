@@ -1,0 +1,40 @@
+---
+const cards = [
+  {
+    icon: "article",
+    title: "Technical Blog",
+    description:
+      "Deep dives into software architecture, frontend performance patterns, and engineering leadership.",
+    href: "#blog",
+  },
+  {
+    icon: "shopping_bag",
+    title: "Digital Products",
+    description:
+      "Premium UI kits, VS Code themes, and developer productivity tools created by me.",
+    href: "#products",
+  },
+];
+---
+
+<section class="py-24 bg-[#18181b]" id="blog">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+    {cards.map((card) => (
+      <a
+        class="group bg-bg-card p-8 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition-all hover:bg-bg-card-hover"
+        href={card.href}
+      >
+        <div class="flex justify-between items-start mb-4">
+          <span class="material-symbols-outlined text-indigo-400 text-4xl group-hover:scale-110 transition-transform">
+            {card.icon}
+          </span>
+          <span class="material-symbols-outlined text-gray-600 group-hover:text-white transition-colors">
+            arrow_outward
+          </span>
+        </div>
+        <h3 class="text-2xl font-bold text-white mb-2">{card.title}</h3>
+        <p class="text-gray-400">{card.description}</p>
+      </a>
+    ))}
+  </div>
+</section>
