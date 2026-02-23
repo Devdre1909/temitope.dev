@@ -25,7 +25,7 @@ function formatDate(date: Date) {
 
     <main class="pt-12 pb-24 px-6">
         <div class="max-w-4xl mx-auto">
-            <div class="mb-16">
+            <div class="mb-16" data-reveal>
                 <h1
                     class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight"
                 >
@@ -43,6 +43,7 @@ function formatDate(date: Date) {
                         <a
                             href={`/blog/${post.id}`}
                             class="group block bg-bg-card p-8 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition-all hover:bg-bg-card-hover"
+                            data-reveal
                         >
                             <div class="flex justify-between items-start mb-3">
                                 <time

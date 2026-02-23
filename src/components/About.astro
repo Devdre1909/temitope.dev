@@ -9,18 +9,27 @@ const stats = [
   <div class="max-w-6xl mx-auto px-6">
     <h2
       class="text-sm font-bold tracking-widest text-indigo-400 uppercase mb-3"
+      data-reveal
     >
       About Me
     </h2>
-    <h3 class="text-3xl font-bold text-white mb-6">
+    <h3
+      class="text-3xl font-bold text-white mb-6"
+      data-reveal
+      data-reveal-delay="1"
+    >
       Building the web, one component at a time.
     </h3>
-    <div class="space-y-4 text-gray-400 text-lg leading-relaxed max-w-3xl">
+    <div
+      class="space-y-4 text-gray-400 text-lg leading-relaxed max-w-3xl"
+      data-reveal
+      data-reveal-delay="2"
+    >
       <p>
         With over 6 years of experience in full-stack development, I specialize
         in building performant web and mobile applications using React, React
-        Native, Node.js, and TypeScript. My work spans fintech, education,
-        and e-commerce — delivering platforms that serve thousands of users.
+        Native, Node.js, and TypeScript. My work spans fintech, education, and
+        e-commerce — delivering platforms that serve thousands of users.
       </p>
       <p>
         Currently, I'm building products at
@@ -30,13 +39,17 @@ const stats = [
         Dotenv Intellisense, a popular VS Code extension.
       </p>
     </div>
-    <div class="mt-8 flex gap-6">
-      {stats.map((stat) => (
-        <div>
-          <span class="block text-3xl font-bold text-white">{stat.value}</span>
-          <span class="text-sm text-gray-500">{stat.label}</span>
-        </div>
-      ))}
+    <div class="mt-8 flex gap-6" data-reveal data-reveal-delay="3">
+      {
+        stats.map((stat) => (
+          <div>
+            <span class="block text-3xl font-bold text-white">
+              {stat.value}
+            </span>
+            <span class="text-sm text-gray-500">{stat.label}</span>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>
