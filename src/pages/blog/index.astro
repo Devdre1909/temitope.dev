@@ -1,0 +1,89 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+
+const posts = (await getCollection("blog"))
+    .filter((post) => !post.data.draft)
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function formatDate(date: Date) {
+    return date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
+}
+---
+
+<Layout
+    title="Blog — Temitope"
+    description="Technical articles on fullstack engineering, architecture, and building products at scale."
+>
+    <Navbar />
+
+    <main class="pt-12 pb-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-16">
+                <h1
+                    class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight"
+                >
+                    Blog
+                </h1>
+                <p class="text-lg text-gray-400 max-w-xl font-light">
+                    Deep dives into software architecture, frontend performance
+                    patterns, and lessons from building products at scale.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                {
+                    posts.map((post) => (
+                        <a
+                            href={`/blog/${post.id}`}
+                            class="group block bg-bg-card p-8 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition-all hover:bg-bg-card-hover"
+                        >
+                            <div class="flex justify-between items-start mb-3">
+                                <time
+                                    datetime={post.data.pubDate.toISOString()}
+                                    class="text-sm text-gray-500"
+                                >
+                                    {formatDate(post.data.pubDate)}
+                                </time>
+                                <span class="material-symbols-outlined text-gray-600 group-hover:text-white transition-colors text-xl">
+                                    arrow_outward
+                                </span>
+                            </div>
+                            <h2 class="text-2xl font-bold text-white mb-2 group-hover:text-indigo-400 transition-colors">
+                                {post.data.title}
+                            </h2>
+                            <p class="text-gray-400 mb-4 leading-relaxed">
+                                {post.data.description}
+                            </p>
+                            {post.data.tags.length > 0 && (
+                                <div class="flex flex-wrap gap-2">
+                                    {post.data.tags.map((tag) => (
+                                        <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-400 border border-gray-700">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                        </a>
+                    ))
+                }
+            </div>
+
+            {
+                posts.length === 0 && (
+                    <p class="text-gray-500 text-center py-20 text-lg">
+                        No posts yet. Check back soon!
+                    </p>
+                )
+            }
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
