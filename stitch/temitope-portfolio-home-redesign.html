@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Temitope - Senior Fullstack Engineer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1E1E1E;
+            --text-primary: #F3F4F6;
+            --text-secondary: #9CA3AF;
+            --accent: #6366F1;
+            --accent-hover: #4F46E5;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<nav class="fixed top-0 w-full z-50 bg-[#121212]/90 backdrop-blur-sm border-b border-gray-800">
+<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<a class="text-xl font-bold tracking-tight text-white hover:text-gray-300 transition-colors" href="#">Temitope.</a>
+<div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+<a class="hover:text-white transition-colors" href="#about">About</a>
+<a class="hover:text-white transition-colors" href="#skills">Skills</a>
+<a class="hover:text-white transition-colors" href="#experience">Experience</a>
+<a class="hover:text-white transition-colors" href="#projects">Projects</a>
+<a class="hover:text-white transition-colors" href="#blog">Blog</a>
+<a class="hover:text-white transition-colors" href="#products">Products</a>
+</div>
+<a class="hidden md:inline-flex items-center gap-2 bg-[#1E1E1E] border border-gray-700 hover:border-gray-500 text-white px-4 py-2 rounded-lg text-sm transition-all" href="mailto:hello@temitope.dev">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+                Get in touch
+            </a>
+</div>
+</nav>
+<header class="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+<div class="max-w-6xl mx-auto">
+<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight tracking-tight">
+                Senior Fullstack Engineer<br/>
+<span class="text-gray-500">crafting robust digital solutions.</span>
+</h1>
+<p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-10 font-light">
+                Hi, I'm Temitope. I build scalable web applications and intuitive user interfaces with a focus on performance and clean architecture.
+            </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2" href="#projects">
+                    View Work
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+<a class="border border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 px-6 py-3 rounded-lg font-medium transition-colors flex items-center gap-2" href="https://github.com/temitope" target="_blank">
+                    GitHub Profile
+                </a>
+</div>
+</div>
+</header>
+<section class="max-w-6xl mx-auto px-6 mb-24" id="projects">
+<div class="flex justify-between items-end mb-8">
+<h2 class="text-2xl font-bold text-white">Featured Projects</h2>
+<div class="flex gap-2">
+<button class="p-2 rounded-full border border-gray-700 hover:bg-gray-800 text-white transition-colors">
+<span class="material-symbols-outlined block">arrow_back</span>
+</button>
+<button class="p-2 rounded-full border border-gray-700 hover:bg-gray-800 text-white transition-colors">
+<span class="material-symbols-outlined block">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory scrollbar-hide" style="-ms-overflow-style: none; scrollbar-width: none;">
+<div class="min-w-[85vw] md:min-w-[calc(50%-12px)] rounded-2xl overflow-hidden shadow-2xl bg-[#1E1E1E] border border-gray-800 relative group cursor-pointer snap-center">
+<div class="w-full h-[400px] overflow-hidden">
+<img alt="Featured Mobile App Project showing dark interface" class="w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXHv0SQxtmB-tpChVoGTaSVPCWSzEmTkFauAn84CeSzk5XJWnlzvIf2iG0-gtfu5GUq1R2IGrz0zbQbvz_Xd_IZ9gUuzjle43umkNabHpYiwezgPekiMcplHEchCA08btGUqNUxFVWBBqbGkH2KV95TSymvhFCXnMeX1GlJXpnfNNWASPSJ-8zzbOSdERYbbLuASJb4R_BrYCyEqvd8P-kRDJADzhGokEQ_xY78BDALOd1s2KlbGD_3KIXc7R4fIkC74zw9X00brU"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-8 md:p-10">
+<div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+<div class="flex gap-2 mb-3">
+<span class="text-xs font-semibold bg-indigo-500/20 text-indigo-300 px-2 py-1 rounded">React Native</span>
+<span class="text-xs font-semibold bg-blue-500/20 text-blue-300 px-2 py-1 rounded">Fintech</span>
+</div>
+<h3 class="text-white text-2xl font-bold mb-2">Finance Flow App</h3>
+<p class="text-gray-300 text-sm md:text-base line-clamp-2">A comprehensive mobile banking solution focusing on user experience and security with biometric authentication.</p>
+</div>
+</div>
+</div>
+<div class="min-w-[85vw] md:min-w-[calc(50%-12px)] rounded-2xl overflow-hidden shadow-2xl bg-[#1E1E1E] border border-gray-800 relative group cursor-pointer snap-center">
+<div class="w-full h-[400px] overflow-hidden">
+<img alt="E-commerce Dashboard Project" class="w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIDaGXspPeBhBszcyqKz6mKuPNNmeiOcRaADC_Rku8qYhEC6YxKfax1YxKlXGd3Ha9BbwCG3YeMYDN2IoK9fhNGD-S8pw-b8aZA2UPJ6rm2NOdY_wWXFb2ww8wUgaMDBmcxYtfOrWYyT9-Bp3175Plk7OQ1Y5xiocS1zdYswqo-zFXsHuWKwUcmJ0_1RHHF6jcQwqgGgZutSM2S1pN47MyziJKy-xl-iPOXiogg2wkZSqgtU2Map4AfZAoxzc0hGlMlKrOFaRwKOU"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-8 md:p-10">
+<div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+<div class="flex gap-2 mb-3">
+<span class="text-xs font-semibold bg-emerald-500/20 text-emerald-300 px-2 py-1 rounded">Vue.js</span>
+<span class="text-xs font-semibold bg-purple-500/20 text-purple-300 px-2 py-1 rounded">D3.js</span>
+</div>
+<h3 class="text-white text-2xl font-bold mb-2">Analytics Dashboard</h3>
+<p class="text-gray-300 text-sm md:text-base line-clamp-2">Real-time data visualization platform for enterprise e-commerce metrics handling millions of events daily.</p>
+</div>
+</div>
+</div>
+<div class="min-w-[85vw] md:min-w-[calc(50%-12px)] rounded-2xl overflow-hidden shadow-2xl bg-[#1E1E1E] border border-gray-800 relative group cursor-pointer snap-center">
+<div class="w-full h-[400px] overflow-hidden">
+<img alt="Travel App Interface" class="w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWGGXheXK0lafm27EgcLithkcPOov6aLApL7Fd9DvROGN1VnpEATveLfMOSH3-_CP0tDWFNf9gEC2SWg3toGhZv7ZyRIhlzhY-m2BnwfDxoaoq_9Xz3LGUOVQWzLYDWKEhouIo6qgw33O59BtvMV9UVTQ1e5ctwdD-JKGX7lezD_SMyLI1s5N8OO2PcQ1Tn_GR9Rm5ReiO0RbMpOZLVGzn5qE-GGi0RP8nXN9xLDcE0hZUsHdBx1WIvWJAwcZB98bM05pKSuCmJTE"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-8 md:p-10">
+<div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+<div class="flex gap-2 mb-3">
+<span class="text-xs font-semibold bg-orange-500/20 text-orange-300 px-2 py-1 rounded">Flutter</span>
+<span class="text-xs font-semibold bg-teal-500/20 text-teal-300 px-2 py-1 rounded">API</span>
+</div>
+<h3 class="text-white text-2xl font-bold mb-2">Wanderlust Mobile</h3>
+<p class="text-gray-300 text-sm md:text-base line-clamp-2">Modern travel companion app designed for digital nomads to find workspaces and connect locally.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#18181b]" id="about">
+<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-sm font-bold tracking-widest text-indigo-400 uppercase mb-3">About Me</h2>
+<h3 class="text-3xl font-bold text-white mb-6">Building the web, one component at a time.</h3>
+<div class="space-y-4 text-gray-400 text-lg leading-relaxed">
+<p>
+                        With over 6 years of experience in full-stack development, I specialize in building performant web applications using modern technologies like React, Node.js, and TypeScript.
+                    </p>
+<p>
+                        Currently, I'm focused on creating accessible, human-centered products at <span class="text-white font-medium">TechCorp</span>. When I'm not coding, you can find me writing technical articles or exploring new coffee shops.
+                    </p>
+</div>
+<div class="mt-8 flex gap-6">
+<div>
+<span class="block text-3xl font-bold text-white">6+</span>
+<span class="text-sm text-gray-500">Years Experience</span>
+</div>
+<div>
+<span class="block text-3xl font-bold text-white">40+</span>
+<span class="text-sm text-gray-500">Projects Completed</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-[#1E1E1E] p-6 rounded-2xl border border-gray-800/50 hover:border-gray-700 transition-all">
+<span class="material-symbols-outlined text-indigo-400 text-4xl mb-4">code</span>
+<h4 class="text-white font-bold mb-2">Frontend</h4>
+<p class="text-gray-500 text-sm">React, Vue, Next.js, Tailwind CSS</p>
+</div>
+<div class="bg-[#1E1E1E] p-6 rounded-2xl border border-gray-800/50 hover:border-gray-700 transition-all translate-y-8">
+<span class="material-symbols-outlined text-indigo-400 text-4xl mb-4">database</span>
+<h4 class="text-white font-bold mb-2">Backend</h4>
+<p class="text-gray-500 text-sm">Node.js, Python, PostgreSQL, Redis</p>
+</div>
+<div class="bg-[#1E1E1E] p-6 rounded-2xl border border-gray-800/50 hover:border-gray-700 transition-all">
+<span class="material-symbols-outlined text-indigo-400 text-4xl mb-4">cloud</span>
+<h4 class="text-white font-bold mb-2">DevOps</h4>
+<p class="text-gray-500 text-sm">AWS, Docker, CI/CD Pipelines</p>
+</div>
+<div class="bg-[#1E1E1E] p-6 rounded-2xl border border-gray-800/50 hover:border-gray-700 transition-all translate-y-8">
+<span class="material-symbols-outlined text-indigo-400 text-4xl mb-4">design_services</span>
+<h4 class="text-white font-bold mb-2">Design</h4>
+<p class="text-gray-500 text-sm">Figma, UI/UX Principles, Systems</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 max-w-6xl mx-auto px-6" id="experience">
+<h2 class="text-3xl font-bold text-white mb-12">Work Experience</h2>
+<div class="space-y-8">
+<div class="group relative pl-8 border-l border-gray-800">
+<span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-indigo-500 ring-4 ring-[#121212]"></span>
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+<h3 class="text-xl font-bold text-white">Senior Fullstack Engineer</h3>
+<span class="text-sm font-mono text-gray-500 bg-[#1E1E1E] px-3 py-1 rounded-full">2021 — Present</span>
+</div>
+<div class="text-indigo-400 font-medium mb-4">TechCorp Inc.</div>
+<p class="text-gray-400 max-w-3xl mb-4">
+                    Leading the frontend migration from legacy systems to Next.js. Architected a micro-frontend solution that improved deployment speed by 40%. Mentoring junior developers and establishing code quality standards.
+                </p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">React</span>
+<span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">TypeScript</span>
+<span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">GraphQL</span>
+</div>
+</div>
+<div class="group relative pl-8 border-l border-gray-800">
+<span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-gray-600 group-hover:bg-indigo-500 transition-colors ring-4 ring-[#121212]"></span>
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+<h3 class="text-xl font-bold text-white">Software Engineer</h3>
+<span class="text-sm font-mono text-gray-500 bg-[#1E1E1E] px-3 py-1 rounded-full">2019 — 2021</span>
+</div>
+<div class="text-gray-400 group-hover:text-indigo-400 transition-colors font-medium mb-4">Creative Solutions Ltd.</div>
+<p class="text-gray-400 max-w-3xl mb-4">
+                    Developed and maintained multiple client e-commerce platforms. Integrated payment gateways (Stripe, PayPal) and optimized database queries reducing server response time by 25%.
+                </p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Vue.js</span>
+<span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Node.js</span>
+<span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">MySQL</span>
+</div>
+</div>
+<div class="group relative pl-8 border-l border-gray-800">
+<span class="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-gray-600 group-hover:bg-indigo-500 transition-colors ring-4 ring-[#121212]"></span>
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+<h3 class="text-xl font-bold text-white">Junior Web Developer</h3>
+<span class="text-sm font-mono text-gray-500 bg-[#1E1E1E] px-3 py-1 rounded-full">2017 — 2019</span>
+</div>
+<div class="text-gray-400 group-hover:text-indigo-400 transition-colors font-medium mb-4">Startup Hub</div>
+<p class="text-gray-400 max-w-3xl mb-4">
+                    Collaborated with designers to implement responsive landing pages. Assisted in API development and bug fixing for the main product dashboard.
+                </p>
+<div class="flex flex-wrap gap-2">
+<span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">JavaScript</span>
+<span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">HTML/CSS</span>
+<span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">Git</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-[#18181b]">
+<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+<a class="group bg-[#1E1E1E] p-8 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition-all hover:bg-[#252525]" href="#blog">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-indigo-400 text-4xl group-hover:scale-110 transition-transform">article</span>
+<span class="material-symbols-outlined text-gray-600 group-hover:text-white transition-colors">arrow_outward</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2">Technical Blog</h3>
+<p class="text-gray-400">Deep dives into software architecture, frontend performance patterns, and engineering leadership.</p>
+</a>
+<a class="group bg-[#1E1E1E] p-8 rounded-2xl border border-gray-800 hover:border-indigo-500/50 transition-all hover:bg-[#252525]" href="#products">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-indigo-400 text-4xl group-hover:scale-110 transition-transform">shopping_bag</span>
+<span class="material-symbols-outlined text-gray-600 group-hover:text-white transition-colors">arrow_outward</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-2">Digital Products</h3>
+<p class="text-gray-400">Premium UI kits, VS Code themes, and developer productivity tools created by me.</p>
+</a>
+</div>
+</section>
+<footer class="border-t border-gray-800 pt-20 pb-10 bg-[#121212]">
+<div class="max-w-6xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16">
+<div>
+<h2 class="text-3xl font-bold text-white mb-2">Let's work together</h2>
+<p class="text-gray-400">Open for freelance opportunities and coffee chats.</p>
+</div>
+<a class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-bold hover:bg-gray-200 transition-colors" href="mailto:hello@temitope.dev">
+                    Say Hello
+                </a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 border-b border-gray-800 pb-12">
+<div>
+<h4 class="text-white font-bold mb-4">Sitemap</h4>
+<ul class="space-y-2 text-sm text-gray-500">
+<li><a class="hover:text-indigo-400 transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-indigo-400 transition-colors" href="#about">About</a></li>
+<li><a class="hover:text-indigo-400 transition-colors" href="#projects">Projects</a></li>
+<li><a class="hover:text-indigo-400 transition-colors" href="#contact">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Socials</h4>
+<ul class="space-y-2 text-sm text-gray-500">
+<li><a class="hover:text-indigo-400 transition-colors" href="#">Twitter / X</a></li>
+<li><a class="hover:text-indigo-400 transition-colors" href="#">LinkedIn</a></li>
+<li><a class="hover:text-indigo-400 transition-colors" href="#">GitHub</a></li>
+<li><a class="hover:text-indigo-400 transition-colors" href="#">Instagram</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-4">Resources</h4>
+<ul class="space-y-2 text-sm text-gray-500">
+<li><a class="hover:text-indigo-400 transition-colors" href="#">Uses</a></li>
+<li><a class="hover:text-indigo-400 transition-colors" href="#">Guestbook</a></li>
+<li><a class="hover:text-indigo-400 transition-colors" href="#">Snippets</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="text-white font-bold mb-4">Newsletter</h4>
+<p class="text-xs text-gray-500 mb-4">Subscribe to my newsletter for the latest updates on my work and writings.</p>
+<form class="flex gap-2">
+<input class="w-full bg-[#1E1E1E] border border-gray-700 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500" placeholder="Email address" type="email"/>
+<button class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-2 rounded text-sm font-medium transition-colors" type="submit">Join</button>
+</form>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
+<p>© 2024 Temitope Portfolio. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-gray-400 transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-gray-400 transition-colors" href="#">Terms of Service</a>
+</div>
+<p class="font-mono text-gray-700">Designed with <span class="text-red-900">♥</span> &amp; Code</p>
+</div>
+</div>
+</footer>
+
+</body></html>

@@ -1,0 +1,162 @@
+---
+const skillGroups = [
+  {
+    emoji: "<>",
+    emojiClass: "text-indigo-400",
+    title: "Frontend",
+    items: [
+      "React / Next.js",
+      "React Native",
+      "Vue / Nuxt.js",
+      "Tailwind CSS / Zustand",
+    ],
+  },
+  {
+    emoji: "🟩",
+    emojiClass: "",
+    title: "Backend",
+    items: [
+      "Node.js / Express",
+      "NestJS / GraphQL",
+      "Socket.IO / RabbitMQ",
+      "MongoDB / PostgreSQL / MySQL",
+    ],
+  },
+  {
+    emoji: "☁️",
+    emojiClass: "",
+    title: "DevOps & Cloud",
+    items: ["AWS (S3, CloudFront)", "Firebase / DigitalOcean", "Expo / Vite"],
+  },
+  {
+    emoji: "🔧",
+    emojiClass: "",
+    title: "Tools & Testing",
+    items: [
+      "TypeScript",
+      "Jest / Cypress / Playwright",
+      "Figma / UI Design",
+      "Git / GitHub",
+    ],
+  },
+];
+
+const openSourceProjects = [
+  {
+    icon: "water_drop",
+    iconBg: "bg-blue-500/15 text-blue-400",
+    title: "Watermark Studio",
+    description:
+      "Cross-platform app for watermarking with privacy focus. Zero server uploads.",
+    href: "https://watermark-studio-site.vercel.app",
+  },
+  {
+    icon: "frame_source",
+    iconBg: "bg-emerald-500/15 text-emerald-400",
+    title: "Dotenv Intellisense",
+    description:
+      "Popular VS Code extension for .env file autocomplete and IntelliSense.",
+    href: "https://marketplace.visualstudio.com/items?itemName=temitope1909.dotenv-intellisense",
+  },
+  {
+    icon: "stadia_controller",
+    iconBg: "bg-purple-500/15 text-purple-400",
+    title: "DevFest Ibadan Puzzle Game",
+    description:
+      "Interactive puzzle game built for Google DevFest Ibadan 2024.",
+    href: "https://dev2024-game.vercel.app/",
+  },
+];
+---
+
+<section class="py-24 max-w-6xl mx-auto px-6" id="skills">
+  <div class="grid md:grid-cols-2 gap-12 items-start">
+    <div class="flex flex-col h-full" data-reveal>
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold text-white">Tech Stack</h2>
+      </div>
+      <div class="grid grid-cols-2 gap-4 flex-1">
+        {
+          skillGroups.map((group) => (
+            <div class="bg-bg-card border border-gray-800 rounded-2xl p-6 flex flex-col">
+              <div class="flex items-center gap-2 mb-4">
+                {group.emojiClass ? (
+                  <span
+                    class={`font-mono font-bold text-lg ${group.emojiClass}`}
+                  >
+                    {group.emoji}
+                  </span>
+                ) : (
+                  <span class="text-lg">{group.emoji}</span>
+                )}
+                <h4 class="text-white font-bold">{group.title}</h4>
+              </div>
+              <ul class="space-y-2">
+                {group.items.map((item) => (
+                  <li class="text-gray-400 text-sm flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-gray-600 shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="flex flex-col h-full" data-reveal data-reveal-delay="2">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl font-bold text-white">Open Source</h2>
+        <div class="flex gap-2">
+          <button
+            id="oss-back"
+            class="w-10 h-10 rounded-full border border-gray-700 hover:bg-gray-800 text-white transition-colors inline-flex items-center justify-center"
+            aria-label="Previous project"
+          >
+            <span class="material-symbols-outlined text-[20px]">arrow_back</span
+            >
+          </button>
+          <button
+            id="oss-forward"
+            class="w-10 h-10 rounded-full border border-gray-700 bg-white text-black hover:bg-gray-200 transition-colors inline-flex items-center justify-center"
+            aria-label="Next project"
+          >
+            <span class="material-symbols-outlined text-[20px]"
+              >arrow_forward</span
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4 flex-1">
+        {
+          openSourceProjects.map((project) => (
+            <a
+              href={project.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-bg-card border border-gray-800 rounded-2xl p-6 flex items-start gap-4 hover:border-gray-700 transition-colors group cursor-pointer flex-1"
+            >
+              <div
+                class={`w-12 h-12 rounded-xl ${project.iconBg} flex items-center justify-center shrink-0`}
+              >
+                <span class="material-symbols-outlined text-[24px]">
+                  {project.icon}
+                </span>
+              </div>
+              <div>
+                <h4 class="text-white font-bold mb-1 group-hover:text-indigo-400 transition-colors">
+                  {project.title}
+                </h4>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  {project.description}
+                </p>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

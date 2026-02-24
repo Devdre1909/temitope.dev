@@ -1,0 +1,77 @@
+---
+const currentYear = new Date().getFullYear();
+
+const socials = [
+  { href: "https://x.com/temitopecodes", label: "Twitter" },
+  { href: "https://linkedin.com/in/temitopecodes", label: "LinkedIn" },
+  { href: "https://github.com/temitopecodes", label: "GitHub" },
+];
+---
+
+<footer class="pt-24 pb-16 bg-bg-dark" id="contact">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex justify-center mb-16">
+      <div
+        class="bg-bg-card border border-gray-800 rounded-2xl p-8 md:p-12 max-w-xl w-full"
+        data-reveal
+      >
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">
+          Let's Build Something
+        </h2>
+        <div
+          class="space-y-4 text-gray-400 text-sm md:text-base leading-relaxed mb-8"
+        >
+          <p>
+            I'm currently open to new opportunities, whether it's full-time work
+            or freelance consulting.
+          </p>
+          <p>
+            If you have a project that needs some creative engineering, or just
+            want to chat about the latest in tech, feel free to reach out. I try
+            my best to respond to all emails within 24 hours.
+          </p>
+        </div>
+        <a
+          href="mailto:adegoketemitope1909@gmail.com"
+          class="flex items-center justify-center gap-2 bg-white text-black font-bold px-6 py-3 rounded-full hover:bg-gray-200 transition-colors w-full"
+        >
+          <span class="material-symbols-outlined text-[20px]">send</span>
+          Send me an email
+        </a>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center text-center" data-reveal>
+      <div class="text-4xl mb-6">👋</div>
+
+      <p class="text-gray-500 text-sm max-w-md mb-8 leading-relaxed">
+        Designed with <a href="http://stitch.withgoogle.com"
+          >stitch.withgoogle.com</a
+        > and coded in <a href="http://cursor.sh">Cursor</a> by yours truly. Built
+        with <a href="http://astro.build">Astro</a> and <a
+          href="http://tailwindcss.com">Tailwind CSS</a
+        >, deployed with <a href="http://vercel.com">Vercel</a>. All text is set
+        in the Inter typeface.
+      </p>
+
+      <div class="flex gap-6 mb-8">
+        {
+          socials.map((link) => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm text-gray-500 hover:text-white transition-colors"
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+
+      <p class="text-xs text-gray-600">
+        &copy; {currentYear} Temitope · Ibadan, Nigeria
+      </p>
+    </div>
+  </div>
+</footer>

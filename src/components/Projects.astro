@@ -1,0 +1,130 @@
+---
+const projects = [
+  {
+    title: "Snappy Exchange",
+    description:
+      "A gift card and crypto exchange platform handling billions in transactions for thousands of users, migrated from legacy PHP to a modern Vue and Node.js stack.",
+    image: "/images/projects/project-finance-flow.png",
+    alt: "Snappy Exchange crypto platform interface",
+    href: "https://www.edulightconsulting.com.ng",
+    tags: [
+      { label: "Vue.js", color: "bg-indigo-500/20 text-indigo-300" },
+      { label: "Node.js", color: "bg-emerald-500/20 text-emerald-300" },
+      { label: "Fintech", color: "bg-blue-500/20 text-blue-300" },
+    ],
+  },
+  {
+    title: "Pika Insights Dashboard",
+    description:
+      "Next.js admin dashboard for FMCG brand performance analytics with GraphQL APIs, supporting 1,000+ businesses managing 4,000+ products.",
+    image: "/images/projects/project-analytics-dashboard.png",
+    alt: "Pika Insights analytics dashboard",
+    href: "https://www.pikainsights.com",
+    tags: [
+      { label: "Next.js", color: "bg-emerald-500/20 text-emerald-300" },
+      { label: "GraphQL", color: "bg-purple-500/20 text-purple-300" },
+    ],
+  },
+  {
+    title: "Learnpally",
+    description:
+      "A Coursera-like e-learning platform with React Native mobile app and adaptive video streaming (420p–1080p), serving thousands of learners.",
+    image: "/images/projects/project-wanderlust.png",
+    alt: "Learnpally e-learning platform interface",
+    href: "https://www.learnpally.com",
+    tags: [
+      { label: "React Native", color: "bg-orange-500/20 text-orange-300" },
+      { label: "Node.js", color: "bg-teal-500/20 text-teal-300" },
+      { label: "EdTech", color: "bg-blue-500/20 text-blue-300" },
+    ],
+  },
+];
+---
+
+<section class="max-w-6xl mx-auto px-6 mb-24" id="projects">
+  <div class="flex justify-between items-end mb-8" data-reveal>
+    <h2 class="text-2xl font-bold text-white">Featured Projects</h2>
+    <div class="flex gap-2">
+      <button
+        id="scroll-back"
+        class="w-10 h-10 rounded-full border border-gray-700 hover:bg-gray-800 text-white transition-colors inline-flex items-center justify-center"
+        aria-label="Scroll back"
+      >
+        <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+      </button>
+      <button
+        id="scroll-forward"
+        class="w-10 h-10 rounded-full border border-gray-700 hover:bg-gray-800 text-white transition-colors inline-flex items-center justify-center"
+        aria-label="Scroll forward"
+      >
+        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="projects-carousel"
+    class="flex overflow-x-auto gap-6 pb-6 snap-x snap-mandatory scrollbar-hide"
+    data-reveal
+    data-reveal-delay="1"
+  >
+    {
+      projects.map((project) => (
+        <a
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="min-w-[85vw] md:min-w-[calc(50%-12px)] rounded-2xl overflow-hidden shadow-2xl bg-bg-card border border-gray-800 relative group cursor-pointer snap-center block"
+        >
+          <div class="w-full h-[400px] overflow-hidden">
+            <img
+              alt={project.alt}
+              class="w-full h-full object-cover opacity-80 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100"
+              src={project.image}
+              loading="lazy"
+            />
+          </div>
+          <div class="absolute inset-0 bg-linear-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-8 md:p-10">
+            <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+              <div class="flex gap-2 mb-3">
+                {project.tags.map((tag) => (
+                  <span
+                    class={`text-xs font-semibold ${tag.color} px-2 py-1 rounded`}
+                  >
+                    {tag.label}
+                  </span>
+                ))}
+              </div>
+              <h3 class="text-white text-2xl font-bold mb-2">
+                {project.title}
+              </h3>
+              <p class="text-gray-300 text-sm md:text-base line-clamp-2">
+                {project.description}
+              </p>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById("projects-carousel");
+  const backBtn = document.getElementById("scroll-back");
+  const fwdBtn = document.getElementById("scroll-forward");
+
+  function getScrollAmount() {
+    if (!carousel) return 0;
+    const card = carousel.querySelector<HTMLElement>(":scope > div");
+    return card ? card.offsetWidth + 24 : 400;
+  }
+
+  backBtn?.addEventListener("click", () => {
+    carousel?.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+  });
+
+  fwdBtn?.addEventListener("click", () => {
+    carousel?.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
+  });
+</script>
