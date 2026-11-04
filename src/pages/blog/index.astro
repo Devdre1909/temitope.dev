@@ -4,9 +4,21 @@ import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
 
-const posts = (await getCollection("blog"))
+const allPosts = (await getCollection("blog"))
     .filter((post) => !post.data.draft)
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const selectedCategory = Astro.url.searchParams.get("category") || "all";
+
+const posts = selectedCategory === "all" 
+    ? allPosts 
+    : allPosts.filter((post) => post.data.category === selectedCategory);
+
+const categories = [
+    { value: "all", label: "All Posts" },
+    { value: "engineering", label: "Engineering" },
+    { value: "faith", label: "Faith & Reflection" },
+];
 
 function formatDate(date: Date) {
     return date.toLocaleDateString("en-US", {
@@ -31,10 +43,25 @@ function formatDate(date: Date) {
                 >
                     Blog
                 </h1>
-                <p class="text-lg text-gray-400 max-w-xl font-light">
+                <p class="text-lg text-gray-400 max-w-xl font-light mb-8">
                     Deep dives into software architecture, frontend performance
                     patterns, and lessons from building products at scale.
                 </p>
+                
+                <div class="flex flex-wrap gap-2">
+                    {categories.map((cat) => (
+                        <a
+                            href={cat.value === "all" ? "/blog" : `/blog?category=${cat.value}`}
+                            class={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                                selectedCategory === cat.value
+                                    ? "bg-indigo-500 text-white"
+                                    : "bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white"
+                            }`}
+                        >
+                            {cat.label}
+                        </a>
+                    ))}
+                </div>
             </div>
 
             <div class="flex flex-col gap-6">

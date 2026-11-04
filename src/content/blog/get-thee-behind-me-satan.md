@@ -3,6 +3,7 @@ title: "Get Thee Behind Me, Satan!"
 description: "A meditation on Matthew 16:23 and Mark 8:33, and what it means to reject anything that pulls us away from God's will."
 pubDate: 2026-03-30
 tags: ["bible", "scripture", "christian-faith", "repentance"]
+category: "faith"
 draft: false
 ---
 

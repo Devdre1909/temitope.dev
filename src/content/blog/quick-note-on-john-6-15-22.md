@@ -3,6 +3,7 @@ title: "Quick Note on John 6:15–22"
 description: "Reflections on the feeding of the five thousand, the storm on the Sea of Galilee, and what changed when Jesus joined the disciples in the boat."
 pubDate: 2026-04-09
 tags: ["bible", "scripture", "christian-faith", "john"]
+category: "faith"
 draft: false
 ---
 

@@ -1,4 +1,6 @@
 ---
+import { socialHandles } from "../config";
+
 const navLinks = [{ href: "/blog", label: "Blog" }];
 ---
 
@@ -16,7 +18,7 @@ const navLinks = [{ href: "/blog", label: "Blog" }];
 
     <div class="flex items-center gap-5">
       <a
-        href="https://linkedin.com/in/temitopecodes"
+        href={socialHandles.linkedin.url}
         target="_blank"
         rel="noopener noreferrer"
         class="text-gray-400 hover:text-white transition-colors"
@@ -29,7 +31,7 @@ const navLinks = [{ href: "/blog", label: "Blog" }];
         </svg>
       </a>
       <a
-        href="https://x.com/temitopecodes"
+        href={socialHandles.twitter.url}
         target="_blank"
         rel="noopener noreferrer"
         class="text-gray-400 hover:text-white transition-colors"
@@ -42,7 +44,7 @@ const navLinks = [{ href: "/blog", label: "Blog" }];
         </svg>
       </a>
       <a
-        href="https://github.com/temitopecodes"
+        href={socialHandles.github.url}
         target="_blank"
         rel="noopener noreferrer"
         class="text-gray-400 hover:text-white transition-colors"

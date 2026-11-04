@@ -3,6 +3,7 @@ title: "Beginner's Guide to *aaS — Uncle Bob's Story on Cloud Computing"
 description: "Follow Uncle Bob's journey through IaaS, PaaS, SaaS, FaaS, and STaaS as he discovers how cloud computing can transform his small business."
 pubDate: 2023-04-12
 tags: ["cloud-computing", "beginners", "infrastructure"]
+category: "engineering"
 draft: false
 ---
 

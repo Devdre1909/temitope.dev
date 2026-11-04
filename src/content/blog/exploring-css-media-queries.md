@@ -3,6 +3,7 @@ title: "Exploring CSS Media Queries"
 description: "A deep dive into the various media queries CSS offers — from width and height to aspect ratio, orientation, resolution, and pointer types."
 pubDate: 2023-02-04
 tags: ["css", "responsive-design", "frontend"]
+category: "engineering"
 draft: false
 ---
 
