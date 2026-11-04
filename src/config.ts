@@ -30,4 +30,5 @@ export const siteConfig = {
   },
   email: "adegoketemitope1909@gmail.com",
   canonicalUrl: "https://www.temitope.dev",
+  resumeUrl: "https://docs.google.com/document/d/1rSGPnZR-iseUdskzukjpou3AWpCsJxOFSfL4PLVLYa8/export?format=pdf",
 } as const;
