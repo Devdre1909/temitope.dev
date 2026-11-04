@@ -3,6 +3,7 @@ title: "Use CSS Vars like a Pro"
 description: "A deep dive into CSS custom properties — from defining variables and scoping to using them with media queries, JavaScript, and animations."
 pubDate: 2023-02-21
 tags: ["css", "frontend", "web-development"]
+category: "engineering"
 draft: false
 ---
 

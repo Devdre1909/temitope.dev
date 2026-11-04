@@ -1,10 +1,12 @@
 ---
+import { socialHandles } from "../config";
+
 const currentYear = new Date().getFullYear();
 
 const socials = [
-  { href: "https://x.com/devtemitope", label: "Twitter" },
-  { href: "https://www.linkedin.com/in/dtemitope", label: "LinkedIn" },
-  { href: "https://github.com/devdre1909", label: "GitHub" },
+  { href: socialHandles.twitter.url, label: "Twitter" },
+  { href: socialHandles.linkedin.url, label: "LinkedIn" },
+  { href: socialHandles.github.url, label: "GitHub" },
 ];
 ---
 
